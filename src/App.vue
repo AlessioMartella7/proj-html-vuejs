@@ -2,30 +2,32 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import Sidebar from './components/Sidebar.vue';
 
 
 export default {
-  components:{
+  components: {
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    Sidebar
   },
   data() {
     return {
       AppHeader,
       AppMain,
-      AppFooter
+      AppFooter,
+      Sidebar
     }
   }
 }
 </script>
 
 <template>
-  <AppHeader/>
-  <AppMain/>
-  <AppFooter/>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
+  <Sidebar />
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
