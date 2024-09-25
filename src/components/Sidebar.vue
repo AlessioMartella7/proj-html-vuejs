@@ -59,13 +59,15 @@ export default {
 }
 
 .sidebar {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 100vh;
     background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
 
     &-header {
         display: flex;
@@ -146,11 +148,17 @@ h1 {
 .footer-text {
     font-size: 17px;
     font-weight: 500;
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
+    position: relative;
     padding: 20px;
     text-align: center;
+    margin-top: 50px;
+    top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        max-width: none;
+    }
 }
 </style>
