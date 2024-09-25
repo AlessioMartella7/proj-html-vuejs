@@ -2,15 +2,14 @@
 export default {
   data() {
     return {
-      
+
     }
   }
 }
 </script>
 
 <template>
-<p>Header</p>
+  <h1>Header </h1>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
