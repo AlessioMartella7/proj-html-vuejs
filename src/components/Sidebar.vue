@@ -161,4 +161,52 @@ h1 {
         max-width: none;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        &-header {
+            padding: 30px;
+        }
+
+        &-body {
+            padding: 10px;
+        }
+    }
+
+    h1 {
+        padding: 80px 0 10px 0;
+        font-size: 24px;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        top: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sidebar {
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .icon {
+        font-size: 32px;
+    }
+
+    .contact-info {
+        font-size: 20px;
+    }
+}
 </style>
