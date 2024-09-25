@@ -1,8 +1,9 @@
-import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 export const contactInfo = [
     {
-        icon: faMapMarkerAlt,
+        icon: faLocationDot,
         info: 'New Jersey, USA'
     },
     {
@@ -12,5 +13,17 @@ export const contactInfo = [
     {
         icon: faEnvelope,
         info: 'example@example.com'
+    }
+]
+
+export const socialIcons = [
+    {
+        icon: faFacebookF,
+    },
+    {
+        icon: faInstagram,
+    },
+    {
+        icon: faLinkedinIn,
     }
 ]

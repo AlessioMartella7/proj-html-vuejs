@@ -5,15 +5,14 @@
         </div>
         <div class="sidebar-body">
             <h1><strong>Contact Information</strong></h1>
-            <div class="icon-container">
-                <font-awesome-icon :icon="['fas', 'phone']" class="icon" />
-
+            <div v-for="(item, index) in reorderedContactInfo" :key="index" class="icon-container">
+                <font-awesome-icon :icon="item.icon" class="icon" />
+                <span>{{ item.info }}</span>
             </div>
-            <div class="icon-container">
-                <font-awesome-icon :icon="['fas', 'envelope']" class="icon" />
-            </div>
-            <div class="icon-container">
-                <font-awesome-icon :icon="['fas', 'location-dot']" class="icon" />
+            <div class="social-icons">
+                <a v-for="(item, index) in socialIcons" :key="index" :href="item.url" target="_blank">
+                    <font-awesome-icon :icon="item.icon" class="icon" />
+                </a>
             </div>
         </div>
     </div>
@@ -21,10 +20,7 @@
 
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faPhone, faEnvelope, faLocationDot)
+import { contactInfo, socialIcons } from '../data/contactInfo'
 
 export default {
     name: 'Sidebar',
@@ -33,7 +29,17 @@ export default {
     },
     data() {
         return {
-            isOpen: false
+            contactInfo,
+            socialIcons
+        }
+    },
+    computed: {
+        reorderedContactInfo() {
+            return [
+                this.contactInfo[1], // Telefono
+                this.contactInfo[2], // Email
+                this.contactInfo[0]  // Posizione
+            ]
         }
     }
 }
@@ -77,6 +83,9 @@ h1 {
 }
 
 .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #fff;
     border-radius: 5px;
     padding: 10px;
@@ -84,9 +93,17 @@ h1 {
 }
 
 .icon {
-    color: #000;
-    background-color: #fff;
-    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    padding: 15px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 }
 </style>
