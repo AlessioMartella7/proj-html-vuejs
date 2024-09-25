@@ -4,15 +4,18 @@
             <img src="../assets/sidebar-assets/loader-gobike.png" alt="logo">
         </div>
         <div class="sidebar-body">
-            <h1><strong>Contact Information</strong></h1>
+            <h1>Contact Information</h1>
             <div v-for="(item, index) in reorderedContactInfo" :key="index" class="icon-container">
-                <font-awesome-icon :icon="item.icon" class="icon" />
-                <span>{{ item.info }}</span>
+                <font-awesome-icon :icon="item.icon" class="icon contact-icon" />
+                <span class="contact-info">{{ item.info }}</span>
             </div>
             <div class="social-icons">
                 <a v-for="(item, index) in socialIcons" :key="index" :href="item.url" target="_blank">
-                    <font-awesome-icon :icon="item.icon" class="icon" />
+                    <font-awesome-icon :icon="item.icon" :class="['icon', 'social-icon', `social-icon-${index}`]" />
                 </a>
+            </div>
+            <div class="sidebar-footer">
+                <span class="footer-text">© 2022 Gobike</span>
             </div>
         </div>
     </div>
@@ -46,11 +49,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .sidebar {
@@ -61,25 +66,26 @@ export default {
     top: 0;
     left: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
 
-.sidebar-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-}
+    &-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+    }
 
-.sidebar-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    &-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 }
 
 h1 {
-    padding-top: 130px;
+    padding: 130px 0 15px 0;
+    font-weight: 700;
 }
 
 .icon-container {
@@ -93,17 +99,58 @@ h1 {
 }
 
 .icon {
-    color: #fff;
-    background-color: #000;
-    padding: 15px;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-size: 24px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
+}
+
+.contact-icon {
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    padding-top: 30px;
+}
+
+.social-icon {
+    color: #000;
+    padding: 10px;
+
+    &-0:hover {
+        color: #1877F2;
+    }
+
+    &-1:hover {
+        color: #E1306C;
+    }
+
+    &-2:hover {
+        color: #1DA1F2;
+    }
+}
+
+.contact-info {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.footer-text {
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
 }
 </style>

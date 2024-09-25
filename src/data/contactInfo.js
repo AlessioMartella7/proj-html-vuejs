@@ -1,5 +1,5 @@
 import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export const contactInfo = [
     {
@@ -24,6 +24,6 @@ export const socialIcons = [
         icon: faInstagram,
     },
     {
-        icon: faLinkedinIn,
+        icon: faXTwitter,
     }
 ]
