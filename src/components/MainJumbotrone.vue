@@ -1,5 +1,5 @@
 <script>
-import MainJumbotrone from './MainJumbotrone.vue';
+import JumbotroneSlider from './JumbotroneSlider.vue';
 
 export default {
   data() {
@@ -8,15 +8,14 @@ export default {
     }
   },
   components: {
-    MainJumbotrone,
+    JumbotroneSlider,
   }
 }
 </script>
 
 <template>
-  <p>Main</p>
-  <MainJumbotrone />
+    <JumbotroneSlider />
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
