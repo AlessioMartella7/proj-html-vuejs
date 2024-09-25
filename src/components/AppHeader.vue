@@ -10,6 +10,7 @@ export default {
 
 <template>
   <h1>Header </h1>
+  <button>Button</button>
 </template>
 
 <style scoped></style>
