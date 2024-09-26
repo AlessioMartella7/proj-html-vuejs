@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar" v-if="isVisible">
         <div class="sidebar-header">
             <img src="../assets/sidebar-assets/loader-gobike.png" alt="logo">
         </div>
@@ -30,6 +30,12 @@ export default {
     components: {
         FontAwesomeIcon
     },
+    props: {
+    isVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
     data() {
         return {
             contactInfo,

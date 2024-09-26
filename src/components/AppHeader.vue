@@ -1,11 +1,13 @@
 
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Sidebar from './Sidebar.vue'
 
 export default {
     name: 'Header',
     components: {
-        FontAwesomeIcon
+        FontAwesomeIcon,
+        Sidebar
     },
     data() {
         return {
@@ -37,14 +39,6 @@ export default {
         } 
       }
       }
-
-
-   
-
-     
-     
-
-
 </script>
 
 <template>
@@ -65,10 +59,9 @@ export default {
    <img src="../assets/img_icons/f1-helmet-svgrepo-com.svg"  class="helmet">Upcoming Events <font-awesome-icon :icon="['fas', 'arrow-right']" />
  </button>
  </div>
-<p v-if="isSidebarDisplayed">toggle funcion tryout</p>
+<!--SideBar added-->
+<Sidebar :isVisible="isSidebarDisplayed" />
 </header>
-
-
 </template>
 
 <style lang="scss">
