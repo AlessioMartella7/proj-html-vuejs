@@ -5,6 +5,7 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
+import AppTrainers from './components/AppTrainers.vue';
 
 
 export default {
@@ -14,7 +15,8 @@ export default {
     AppFooter,
     Sidebar,
     AppMainAboutUs,
-    AppMainEvents
+    AppMainEvents,
+    AppTrainers
   },
   data() {
     return {
@@ -30,6 +32,7 @@ export default {
   <AppMain />
   <AppMainAboutUs/>
   <AppMainEvents/>
+  <AppTrainers />
   <AppFooter />
 </template>
 
