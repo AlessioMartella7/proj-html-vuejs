@@ -2,8 +2,8 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import Sidebar from './components/Sidebar.vue';
-import store from './data/store';
+import quickLinks, { trainings, contactInfo, socialIcons } from './data/store.js';
+
 
 
 export default {
@@ -11,12 +11,14 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar
-
   },
+
   data() {
     return {
-      store
+      quickLinks,
+      trainings,
+      contactInfo,
+      socialIcons
     }
   }
 }
@@ -25,8 +27,8 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <AppFooter :quickLinks="store.quickLinks" :trainings="store.trainings" />
-  <Sidebar />
+  <AppFooter :quickLinks="quickLinks" :trainings="trainings" :contactInfo="contactInfo" :socialIcons="socialIcons" />
+
 </template>
 
 <style lang="scss"></style>

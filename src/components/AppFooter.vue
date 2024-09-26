@@ -1,13 +1,9 @@
 <script>
-import { contactInfo } from '../data/store.js'
-import { socialIcons } from '../data/store.js';
-
 
 export default {
   data() {
     return {
-      contactInfo,
-      socialIcons,
+
     }
   },
 
@@ -20,16 +16,26 @@ export default {
     trainings: {
       type: Array,
       Required: true
+    },
+
+    contactInfo: {
+      type: Array,
+      Required: true
+    },
+
+    socialIcons: {
+      type: Array,
+      Required: true
     }
+
   }
 }
 </script>
 
 <template>
-  <p>Footer</p>
   <footer class="w-100 p-1">
     <div class="container ">
-      <div class="row p-3">
+      <div class="row py-3 d-flex justify-content-between">
         <div class="col-3">
           <!--# Contatti -->
           <div id="footer-contacts">
@@ -64,14 +70,30 @@ export default {
           </form>
 
         </div>
+
         <!--# lista Trainings -->
+        <div class="col-2 mt-3">
+          <h3>Trainings</h3>
+          <ul>
+            <li v-for="(item, i) in trainings" :key='i'><font-awesome-icon :icon="['fas', 'minus']" /> {{ item }}</li>
+          </ul>
+        </div>
+
         <!--# lista Quick Links -->
+        <div class="col-2 mt-3">
+          <h3>Quick links</h3>
+          <ul>
+            <li v-for="(item, i) in quickLinks" :key='i'><font-awesome-icon :icon="['fas', 'minus']" /> {{ item.name }}
+            </li>
+          </ul>
+        </div>
 
       </div>
     </div>
+
     <!--# Rights Reserved -->
     <div>
-      <p class="text-center my-4">© 2024 Gobike - All rights reserved.</p>
+      <p class=" text-center my-4">© 2024 Gobike - All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -85,8 +107,12 @@ footer {
 }
 
 ul {
-  padding: 0;
+  padding-left: 5px;
+  line-height: 30px;
+  list-style-type: none;
 }
+
+li {}
 
 .social-icon {
   border: 1px solid gray;

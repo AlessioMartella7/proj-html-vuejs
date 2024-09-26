@@ -28,9 +28,9 @@ export const socialIcons = [
     }
 ]
 
-// Array dei quick links7
+// Array dei quick links
 
-const quickLinks = [
+const quickLinks= [
     {
         name: 'Home',
         url: '/'
@@ -52,15 +52,16 @@ const quickLinks = [
         url: '/contact'
     }
 ]
+export default quickLinks;
 
-const trainings = [
+
+export const trainings=[
     'riding lessons',
     'safe driving',
     'mountain bike',
     'trail drive',
     'pedaling'
 ]
-export default quickLinks;
 
 
     
