@@ -15,7 +15,8 @@ export default {
   },
   data() {
     return {
-      showSidebar: false // Nascondi temporaneamente la sidebar
+      showSidebar: true,
+      showAppMain: false
     }
   },
   methods: {
@@ -29,7 +30,7 @@ export default {
 <template>
   <AppHeader />
   <Sidebar v-if="showSidebar" />
-  <AppMain />
+  <AppMain v-if="showAppMain" />
   <AppFooter />
   <MouseFollow />
 </template>
