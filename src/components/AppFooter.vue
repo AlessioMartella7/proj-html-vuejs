@@ -42,7 +42,7 @@ export default {
             <img src="../assets/logos/logo-footer-gobike.png" alt="footer_gobike_logo" class="img-fluid mb-3 w-75">
 
             <!-- Contacts comp -->
-            <ul class="m2">
+            <ul>
               <li class="list-unstyled mb-4" v-for="(item, index) in contactInfo" :key="index">
                 <font-awesome-icon :icon="item.icon" class="icon fs-4 me-4" />
                 <span>{{ item.info }}</span>
@@ -50,8 +50,9 @@ export default {
             </ul>
 
             <!-- Social comp -->
-            <div class="social d-flex justify-content-around row">
-              <div class="social-icon col-3 p-1 text-center" v-for="(item, index) in socialIcons" :key="index">
+            <div class="social d-flex">
+              <div class=" social-icon col-3 p-1 m-1 fs-5 text-center" v-for="(item, index) in socialIcons"
+                :key="index">
                 <a><font-awesome-icon :icon="item.icon" /></a>
               </div>
             </div>
@@ -61,7 +62,7 @@ export default {
         <!--# Form -->
         <div class="col-4 mt-3">
           <h3>Join our newsletter</h3>
-          <p class="my-3"> Subscribe to receive useful information.</p>
+          <p class="my-4"> Subscribe to receive useful information.</p>
           <form>
             <input type="email" class="mb-1 p-3 border border-none" id="exampleFormControlInput1"
               placeholder="Your email address">
@@ -74,7 +75,7 @@ export default {
         <!--# lista Trainings -->
         <div class="col-2 mt-3">
           <h3>Trainings</h3>
-          <ul>
+          <ul class="my-3">
             <li v-for="(item, i) in trainings" :key='i'><font-awesome-icon :icon="['fas', 'minus']" /> {{ item }}</li>
           </ul>
         </div>
@@ -82,7 +83,7 @@ export default {
         <!--# lista Quick Links -->
         <div class="col-2 mt-3">
           <h3>Quick links</h3>
-          <ul>
+          <ul class="my-3">
             <li v-for="(item, i) in quickLinks" :key='i'><font-awesome-icon :icon="['fas', 'minus']" /> {{ item.name }}
             </li>
           </ul>
@@ -101,7 +102,10 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
 
+
+
 footer {
+  font-family: "Poppins", sans-serif;
   background-color: black;
   color: white;
 }
@@ -112,12 +116,10 @@ ul {
   list-style-type: none;
 }
 
-li {}
-
 .social-icon {
   border: 1px solid gray;
   cursor: pointer;
-
+  width: 70px;
   padding: 10px;
 
   &:nth-child(1):hover {
