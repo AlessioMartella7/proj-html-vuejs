@@ -2,9 +2,11 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import Sidebar from './components/Sidebar.vue';
+// import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
+import AppMainNews from './components/AppMainNews.vue';
+
 
 
 export default {
@@ -12,13 +14,14 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar,
+    // Sidebar,
     AppMainAboutUs,
-    AppMainEvents
+    AppMainEvents,
+    AppMainNews
   },
   data() {
     return {
-  
+
     }
   }
 }
@@ -26,10 +29,11 @@ export default {
 
 <template>
   <AppHeader />
-  <Sidebar />
+  <!-- <Sidebar /> -->
   <AppMain />
-  <AppMainAboutUs/>
-  <AppMainEvents/>
+  <AppMainAboutUs />
+  <AppMainEvents />
+  <AppMainNews />
   <AppFooter />
 </template>
 
