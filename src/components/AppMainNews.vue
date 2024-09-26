@@ -18,17 +18,17 @@ export default {
 
         <p>Important information about bikes</p>
         <div class=" card-list row">
-            <div class="col">
-                <div class="card">
+            <div class="col" v-for="(item, i) in news">
+                <div class="card p-4">
                     <figure>
-                        <img :src="news.image" alt="news.image">
+                        <img :src="item.image" alt="news.img">
                         <figcaption>
-                            {{ news.figcaption }}
+                            {{ item.figCaption }}
                         </figcaption>
                     </figure>
-                    <h4>{{ news.title }}</h4>
-                    <p>{{ news.content }}</p>
-                    <button>News</button>
+                    <h5>{{ item.title }}</h5>
+                    <p>{{ item.content }}</p>
+                    <button class="align-self-center">More</button>
                 </div>
             </div>
         </div>
@@ -46,16 +46,33 @@ export default {
     text-align: center;
 }
 
+.card {
+    box-shadow: 0 0 5px black;
+
+    p,
+    figcaption,
+    button {
+        font-size: 14px;
+    }
+
+    h5,
+    button,
+    figcaption {
+        font-weight: bold
+    }
+}
+
 button {
+
+    border: 1px solid transparent;
+    border-radius: 5px;
     background: black;
     color: rgba(255, 255, 255, 0.9);
-    border: 2px solid white;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
+    width: 100px;
+
 
 }
 </style>
