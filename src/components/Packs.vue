@@ -8,7 +8,8 @@
             <span class="subtitle">Select pricing plan to get more</span>
         </div>
         <div class="pack-cards">
-            <div v-for="pack in packs" :key="pack.name" class="pack-card">
+            <div v-for="pack in packs" :key="pack.name" class="pack-card" @mousemove="rotateCard"
+                @mouseleave="resetCard" ref="packCards">
                 <div class="pack-card-inner">
                     <div class="pack-card-front">
                         <div class="pack-content">
@@ -56,6 +57,21 @@ export default {
         return {
             faMedal,
             packs
+        }
+    },
+    methods: {
+        rotateCard(event) {
+            const card = event.currentTarget;
+            const cardRect = card.getBoundingClientRect();
+            const cardCenterX = cardRect.left + cardRect.width / 2;
+            const cardCenterY = cardRect.top + cardRect.height / 2;
+            const angleX = -(event.clientY - cardCenterY) / 10;
+            const angleY = (event.clientX - cardCenterX) / 10;
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+        },
+        resetCard(event) {
+            const card = event.currentTarget;
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
         }
     }
 }
@@ -162,6 +178,7 @@ export default {
     height: 650px;
     perspective: 1000px;
     position: relative;
+    transition: transform 0.3s ease;
 
     &::before {
         content: '';
