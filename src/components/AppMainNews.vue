@@ -11,6 +11,21 @@ export default {
     methods: {
         getImagePath: function (imgPath) {
             return new URL(imgPath, import.meta.url).href;
+        },
+
+        rotateCard(event) {
+            const card = event.currentTarget;
+            const cardRect = card.getBoundingClientRect();
+            const cardCenterX = cardRect.left + cardRect.width / 2;
+            const cardCenterY = cardRect.top + cardRect.height / 2;
+            const angleX = -(event.clientY - cardCenterY) / 10;
+            const angleY = (event.clientX - cardCenterX) / 10;
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+        },
+
+        resetCard(event) {
+            const card = event.currentTarget;
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
         }
     }
 }
@@ -26,7 +41,7 @@ export default {
         <p>Important information about bikes</p>
         <div class=" card-list row row-cols-4 justify-content-between my-4">
             <div class="col p-4" v-for="(item, i) in news">
-                <div class="card p-4">
+                <div class="card p-4" @mousemove="rotateCard" @mouseleave="resetCard">
                     <figure>
                         <img :src="getImagePath(item.image)" alt="news.img" class="img-fluid">
                         <figcaption>
@@ -64,6 +79,10 @@ export default {
         font-size: 14px;
     }
 
+    p {
+        text-align: left;
+    }
+
     h5,
     button {
         font-weight: bold
@@ -72,6 +91,7 @@ export default {
     figcaption {
         font-weight: 500;
     }
+
 }
 
 .card>* {
