@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-  
+
     }
   }
 }
@@ -28,9 +28,11 @@ export default {
   <AppHeader />
   <Sidebar />
   <AppMain />
-  <AppMainAboutUs/>
-  <AppMainEvents/>
+  <AppMainAboutUs />
+  <AppMainEvents />
   <AppFooter />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import './styles/general.scss';
+</style>
