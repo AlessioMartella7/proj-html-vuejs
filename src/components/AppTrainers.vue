@@ -30,7 +30,7 @@ export default {
             <div class="image-container">
               <img class="card-img-top" src="../assets/img_bikers/biker3.jpg" alt="Card image cap">
               <div class="card-text">
-                <span>John Doe</span>
+                <h5>John Doe</h5>
                 <small>Biker</small>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default {
             <div class="image-container">
               <img class="card-img-top" src="../assets/img_bikers/biker2.jpg" alt="Card image cap">
               <div class="card-text">
-                <span>John Doe</span>
+                <h5>John Doe</h5>
                 <small>Biker</small>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default {
             <div class="image-container">
               <img class="card-img-top" src="../assets/img_bikers/biker1.jpg" alt="Card image cap">
               <div class="card-text">
-                <span>John Doe</span>
+                <h5>John Doe</h5>
                 <small>Biker</small>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default {
             <div class="image-container">
               <img class="card-img-top" src="../assets/img_bikers/biker4.jpg" alt="Card image cap">
               <div class="card-text">
-                <span>John Doe</span>
+                <h5>John Doe</h5>
                 <small>Biker</small>
               </div>
             </div>
@@ -125,7 +125,7 @@ section {
 }
 
 small{
-    font-size: 0.8em; 
+    font-size: 0.9em; 
   display: block; 
   margin-top: 5px; 
   color: #B3B3B3;
