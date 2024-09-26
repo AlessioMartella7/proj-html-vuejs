@@ -15,6 +15,12 @@ export default {
   },
   data() {
     return {
+      showSidebar: false // Nascondi temporaneamente la sidebar
+    }
+  },
+  methods: {
+    getImagePath: function (imgPath) {
+      return new URL(imgPath, import.meta.url).href;
     }
   }
 }
@@ -22,7 +28,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Sidebar />
+  <Sidebar v-if="showSidebar" />
   <AppMain />
   <AppFooter />
   <MouseFollow />
