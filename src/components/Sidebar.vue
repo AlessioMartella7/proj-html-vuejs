@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="sidebar">
         <div class="sidebar-header">
             <img src="../assets/sidebar-assets/loader-gobike.png" alt="logo">
@@ -56,6 +56,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    display: none; //DA CANCELLARE FINITI I PACKS   
 }
 
 .sidebar {
@@ -209,4 +210,12 @@ h1 {
         font-size: 20px;
     }
 }
-</style>
+</style> -->
+
+<template>
+</template>
+
+<script>
+</script>
+
+<style scoped></style>

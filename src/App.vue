@@ -6,19 +6,21 @@ import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
 
+import Packs from './components/Packs.vue';
+import MouseFollow from './components/MouseFollow.vue';
 
 export default {
   components: {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar,
-    AppMainAboutUs,
-    AppMainEvents
+    Sidebar
   },
   data() {
     return {
-
+,
+      Packs,
+      MouseFollow
     }
   }
 }
@@ -31,6 +33,8 @@ export default {
   <AppMainAboutUs />
   <AppMainEvents />
   <AppFooter />
+  <Packs />
+  <MouseFollow />
 </template>
 
 <style lang="scss">
