@@ -61,7 +61,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-[class*="col"]{border: 1px dashed red;} //col higlight
 
 .main-content img {
     height: 80px;
@@ -75,6 +74,7 @@ export default {
     position: absolute;
     top: 15%;
     left: 16%;
+    z-index: -1;
 }
 
 .rotate{
