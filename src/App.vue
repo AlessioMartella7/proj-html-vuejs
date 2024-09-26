@@ -5,7 +5,6 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
-
 import Packs from './components/Packs.vue';
 import MouseFollow from './components/MouseFollow.vue';
 
@@ -14,13 +13,14 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar
+    Sidebar,
+    AppMainAboutUs,
+    AppMainEvents,
+    Packs,
+    MouseFollow
   },
   data() {
     return {
-,
-      Packs,
-      MouseFollow
     }
   }
 }

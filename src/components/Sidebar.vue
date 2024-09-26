@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div class="sidebar">
         <div class="sidebar-header">
             <img src="../assets/sidebar-assets/loader-gobike.png" alt="logo">
@@ -210,12 +210,4 @@ h1 {
         font-size: 20px;
     }
 }
-</style> -->
-
-<template>
-</template>
-
-<script>
-</script>
-
-<style scoped></style>
+</style>
