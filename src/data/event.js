@@ -1,4 +1,4 @@
-const event = [
+const events = [
     {
       img:'../assets/img_events/event1.jpg' , 
       race: 'Toronto Cycling Event 2023',
@@ -72,4 +72,4 @@ const event = [
     
 ]
 
-export { event};
+export { events};

@@ -1,15 +1,15 @@
 <script>
-import AppMainAboutUs from './AppMainAboutUs.vue'
+// import AppMainAboutUs from './AppMainAboutUs.vue'
 import AppMainEvents from './AppMainEvents.vue';
-import AppMainPacks from './AppMainPacks.vue'
-import {event} from '../data/event'
+// import AppMainPacks from './AppMainPacks.vue'
+
 
 export default {
   
   components:{
-     AppMainAboutUs,
+    //  AppMainAboutUs,
      AppMainEvents,
-     AppMainPacks,
+    //  AppMainPacks,
     },
   data() {
     return {
@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <AppMainAboutUs/>
+  <!-- <AppMainAboutUs/> -->
   <AppMainEvents/>
-  <AppMainPacks/>
+  <!-- <AppMainPacks/> -->
 
 </template>
 
