@@ -14,7 +14,8 @@ export default {
 
         <!-- left side -->
         <div class="col-8">
-            <img src=".././assets/img_aboutus/bike-player.png" alt="player-img">
+            <img id="bikers" src=".././assets/img_aboutus/bike-player.png" alt="player-img">
+                <img id="gear" class="rotate" src="../assets/img_aboutus/bike-circle.png" alt="gear">
         </div>
 
         <!-- right side -->
@@ -65,5 +66,27 @@ export default {
 .main-content img {
     height: 80px;
 }
+#bikers{
+    position: relative;
+    z-index: 1;
+}
+
+#gear {
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+
+.rotate{
+    animation: rotation 15s infinite linear;}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+    }
 
 </style>
