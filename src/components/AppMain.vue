@@ -1,5 +1,9 @@
 <script>
+import AppTrainers from './AppTrainers.vue';
 export default {
+  components:{
+    AppTrainers,
+  },
   data() {
     return {
       mainText: 'Main'
@@ -9,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <p>{{ mainText }}</p>
+  <AppTrainers />
 </template>
 
 <style scoped></style>
