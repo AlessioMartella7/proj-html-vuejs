@@ -55,7 +55,7 @@ export default {
  <div class="d-flex align-items-center justify-content-between gap-5">
 <a href="#" class="text-dark"><font-awesome-icon class="fs-3" :icon="['fas', 'bars']" /></a>
  <button class="btn btn-dark rounded">
- Upcoming Events <font-awesome-icon :icon="['fas', 'arrow-right']" />
+   <img src="../assets/img_icons/f1-helmet-svgrepo-com.svg"  class="helmet">Upcoming Events <font-awesome-icon :icon="['fas', 'arrow-right']" />
  </button>
  </div>
 
@@ -114,6 +114,8 @@ button{
   height:80px;
 }
 
-
+.helmet{
+  filter: invert(1) brightness(2); 
+}
 
 </style>
