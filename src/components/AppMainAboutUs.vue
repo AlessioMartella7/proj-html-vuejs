@@ -49,6 +49,9 @@ export default {
                         <p>We always ride with the best equipment, respecting nature and fun.</p>
                     </div>
                 </div>
+
+                <!-- button -->
+                <button type="button" class="btn btn-dark btn-lg px-5 pt-3 pb-3 rounded-0 text-white fs-6">Get to know us &RightArrow;</button>
              </div>
 
         </div>
