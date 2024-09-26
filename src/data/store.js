@@ -56,11 +56,11 @@ export default quickLinks;
 
 
 export const trainings=[
-    'riding lessons',
-    'safe driving',
-    'mountain bike',
-    'trail drive',
-    'pedaling'
+    'Riding lessons',
+    'Safe driving',
+    'Mountain bike',
+    'Trail drive',
+    'Pedaling'
 ]
 
 
