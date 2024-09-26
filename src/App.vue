@@ -6,6 +6,8 @@ import AppMain from './components/AppMain.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
 
+import Sidebar from './components/Sidebar.vue';
+import MouseFollow from './components/MouseFollow.vue';
 
 
 
@@ -22,9 +24,18 @@ export default {
   data() {
     return {
 
+      Sidebar,
+      MouseFollow
+    }
+  },
+
+  methods: {
+    getImagePath: function (imgPath) {
+      return new URL(imgPath, import.meta.url).href;
     }
   }
 }
+
 </script>
 
 <template>
@@ -34,6 +45,10 @@ export default {
   <AppMainAboutUs />
   <AppMainEvents />
   <AppFooter />
+  <MouseFollow />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "bootstrap/scss/bootstrap.scss" as *;
+@use "./styles/general.scss" as *;
+</style>

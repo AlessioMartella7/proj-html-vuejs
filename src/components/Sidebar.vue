@@ -56,6 +56,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    display: none; //DA CANCELLARE FINITI I PACKS
 }
 
 .sidebar {
@@ -67,26 +68,28 @@ export default {
     top: 0;
     left: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 
     &-header {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 60px;
+        padding: 20px;
     }
 
     &-body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 20px;
+        flex-grow: 1;
     }
 }
 
 h1 {
-    padding: 130px 0 15px 0;
+    padding: 20px 0 15px 0;
     font-weight: 700;
 }
 
@@ -148,11 +151,8 @@ h1 {
 .footer-text {
     font-size: 17px;
     font-weight: 500;
-    position: relative;
-    padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    top: 150px;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -165,7 +165,7 @@ h1 {
 @media screen and (max-width: 480px) {
     .sidebar {
         &-header {
-            padding: 30px;
+            padding: 15px;
         }
 
         &-body {
@@ -174,7 +174,7 @@ h1 {
     }
 
     h1 {
-        padding: 80px 0 10px 0;
+        padding: 10px 0;
         font-size: 24px;
     }
 
@@ -188,7 +188,6 @@ h1 {
 
     .footer-text {
         font-size: 14px;
-        top: 100px;
     }
 }
 
@@ -209,4 +208,8 @@ h1 {
         font-size: 20px;
     }
 }
+<<<<<<< HEAD
 </style> -->
+=======
+</style>
+>>>>>>> main

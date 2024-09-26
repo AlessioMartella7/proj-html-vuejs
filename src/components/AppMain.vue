@@ -1,7 +1,16 @@
 <script>
+import AppMainAboutUs from './AppMainAboutUs.vue'
+import AppMainEvents from './AppMainEvents.vue';
+import AppMainPacks from './AppMainPacks.vue'
+
 import AppMainNews from './AppMainNews.vue';
 
 export default {
+  components: {
+    AppMainAboutUs,
+    AppMainEvents,
+    AppMainPacks,
+  },
   data() {
     return {
 
@@ -16,7 +25,6 @@ export default {
 
 <template>
   <p>Main</p>
-  <AppMainNews />
 </template>
 
 <style scoped></style>
