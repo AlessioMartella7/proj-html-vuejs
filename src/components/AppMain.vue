@@ -1,16 +1,16 @@
 <script>
-import AppMainAboutUs from './components/AppMainAboutUs.vue';
-import AppMainEvents from './components/AppMainEvents.vue';
-import AppMainPacks from './components/AppMainPacks.vue';
+import AppMainAboutUs from './AppMainAboutUs.vue'
+import AppMainEvents from './AppMainEvents.vue';
+import AppMainPacks from './AppMainPacks.vue'
 
 export default {
-  components:
+  components:{
      AppMainAboutUs,
      AppMainEvents,
      AppMainPacks,
+    },
   data() {
     return {
-
     }
   }
 }
