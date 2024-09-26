@@ -16,7 +16,15 @@ export default {
         { text: 'Packages', link: '#' },
         { text: 'Blog', link: '#' },
         { text: 'Contact', link: '#' }
-    ]
+       ],
+       hoverMenu:[
+        {text: 'Riding Lessons', link: '#'},
+        {text: 'Safe Driving', link:'#'},
+        {text:'Mountain Bike', link:'#'},
+        {text:'Trail Drive', link: '#'},
+        {text:'Pedaling', link:'#'},
+        {text:'All Trainings', link:'#'}
+      ]
         }
     },
    
@@ -27,7 +35,7 @@ export default {
 <header class="d-flex justify-content-between align-items-center bg-white">
 <img class="d-block" src="../assets/img-header/logo-gobike.png" alt="">
 <ul class="d-flex align-items-center" >
-  <li class="ms-3" v-for="(item, index) in menuItems" :key="index">
+  <li class="ms-3" v-for="(item, index) in menuItems" :key="index"> <!--Popolazione dinamica dell'header tramite array menuItems-->
     <a :href="item.link">{{ item.text }}</a>
   </li>
 </ul>
@@ -69,5 +77,22 @@ ul a{
   color: black;
 }
 
+ul li{
+  position:relative;
+}
+ul li::after{
+   content: "";
+   display: block;
+   background-color: black;
+   height: 2px;
+   background-color: black;
+   width: 0;
+   transition: width 0.3s;
+   left: 0;
+   bottom: 0;
+}
+ul li:hover::after{
+  width:100%;
+}
 
 </style>
