@@ -6,8 +6,16 @@ export default {
         return {
             news,
         }
+    },
+
+
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
     }
 }
+
 </script>
 
 <template>
@@ -21,7 +29,7 @@ export default {
             <div class="col" v-for="(item, i) in news">
                 <div class="card p-4">
                     <figure>
-                        <img :src="item.image" alt="news.img">
+                        <img :src="getImagePath(item.image)" alt="news.img">
                         <figcaption>
                             {{ item.figCaption }}
                         </figcaption>

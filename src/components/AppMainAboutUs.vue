@@ -9,12 +9,6 @@ export default {
 </script>
 
 <template>
-<<<<<<< HEAD
-
-</template>
-
-<style scoped></style>
-=======
     <div class="container py-5">
         <div class="row">
 
@@ -99,4 +93,3 @@ export default {
     }
 }
 </style>
->>>>>>> main

@@ -6,7 +6,7 @@ import AppMain from './components/AppMain.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
 
-import Sidebar from './components/Sidebar.vue';
+// import Sidebar from './components/Sidebar.vue';
 import MouseFollow from './components/MouseFollow.vue';
 
 
@@ -24,16 +24,12 @@ export default {
   data() {
     return {
 
-      Sidebar,
+      // Sidebar,
       MouseFollow
     }
   },
 
-  methods: {
-    getImagePath: function (imgPath) {
-      return new URL(imgPath, import.meta.url).href;
-    }
-  }
+
 }
 
 </script>
