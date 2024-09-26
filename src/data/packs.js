@@ -1,5 +1,7 @@
 // Import required icons
-import { faHandshake, faBriefcase, faMotorcycle } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake } from '@fortawesome/free-solid-svg-icons';
+import standardPackIcon from '../assets/packs-assets/standard-icon.png';
+import premiumPackIcon from '../assets/packs-assets/premium-icon.png';
 
 // Array of packages
 export const packs = [
@@ -18,7 +20,7 @@ export const packs = [
     },
     {
         name: "Standard Pack",
-        icon: faBriefcase,
+        icon: standardPackIcon,
         subtitle: "Learn to ride from the professionals.",
         price: "$2500",
         features: [
@@ -31,7 +33,7 @@ export const packs = [
     },
     {
         name: "Premium Pack",
-        icon: faMotorcycle,
+        icon: premiumPackIcon,
         subtitle: "Learn to ride from the professionals.",
         price: "$5000",
         features: [

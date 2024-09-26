@@ -13,7 +13,10 @@
                     <div class="pack-card-front">
                         <div class="pack-content">
                             <div class="pack-icon">
-                                <font-awesome-icon :icon="pack.icon" class="icon pack-icon" />
+                                <font-awesome-icon v-if="pack.name === 'Base Pack'" :icon="pack.icon"
+                                    class="icon pack-icon" style="color: white;" />
+                                <img v-else :src="pack.icon" :alt="pack.name" class="icon pack-icon"
+                                    style="filter: brightness(0) invert(1);" />
                             </div>
                             <h2>{{ pack.name }}</h2>
                             <p>{{ pack.subtitle }}</p>
@@ -167,7 +170,7 @@ export default {
         left: -3px;
         right: -3px;
         bottom: -3px;
-        background: linear-gradient(45deg, #000000, #333333, #666666, #999999, #cccccc, #ffffff, #cccccc, #999999, #666666, #333333, #000000); // Cambiato i colori per adattarli allo stile generale
+        background: linear-gradient(45deg, #000000, #333333, #666666, #999999, #cccccc, #ffffff, #cccccc, #999999, #666666, #333333, #000000);
         background-size: 400%;
         z-index: -1;
         filter: blur(5px);
@@ -209,8 +212,8 @@ export default {
     }
 
     &-back {
-        background: #333; // Cambiato il colore di sfondo per adattarlo allo stile generale
-        color: #fff; // Cambiato il colore del testo per adattarlo allo stile generale
+        background: #333;
+        color: #fff;
         transform: rotateY(180deg);
         display: flex;
         flex-direction: column;
@@ -223,29 +226,29 @@ export default {
         .wave {
             position: absolute;
             width: 500px;
-            height: 350px; // Ridotto per limitare l'effetto alla parte alta
+            height: 350px;
             opacity: 0.6;
             left: -50%;
-            top: 0; // Posizionato in alto
-            background-color: #666; // Cambiato il colore dell'onda per adattarlo allo stile generale
+            top: 0;
+            background-color: #666;
             border-radius: 40%;
             animation: wave 5s infinite linear;
         }
 
         .wave:nth-child(2) {
-            top: 5px; // Posizionato leggermente più in basso
+            top: 5px;
             animation: wave 7s infinite linear;
         }
 
         .wave:nth-child(3) {
-            top: 10px; // Posizionato ancora più in basso
+            top: 10px;
             animation: wave 9s infinite linear;
         }
 
         .dynamic-color {
             position: relative;
             z-index: 10;
-            background: linear-gradient(45deg, #000000, #333333, #666666, #999999, #cccccc, #ffffff, #cccccc, #999999, #666666, #333333, #000000); // Cambiato i colori del gradiente per adattarli allo stile generale
+            background: linear-gradient(45deg, #000000, #333333, #666666, #999999, #cccccc, #ffffff, #cccccc, #999999, #666666, #333333, #000000);
             background-clip: text;
             -webkit-background-clip: text;
             color: rgba(255, 255, 255, 0.9);
@@ -291,6 +294,13 @@ export default {
         font-size: 64px;
         margin-bottom: 30px;
         color: #fff;
+
+        // Aggiungi stili per le immagini PNG
+        &[src] {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
     }
 
     h2 {
