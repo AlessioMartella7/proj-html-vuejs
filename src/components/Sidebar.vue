@@ -31,11 +31,11 @@ export default {
         FontAwesomeIcon
     },
     props: {
-    isVisible: {
-      type: Boolean,
-      default: false
-    }
-  },
+        isVisible: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             contactInfo,
@@ -62,7 +62,6 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    display: none; //DA CANCELLARE FINITI I PACKS
 }
 
 .sidebar {
