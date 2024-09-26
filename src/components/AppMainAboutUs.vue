@@ -1,80 +1,73 @@
 <script>
 export default {
-<<<<<<< HEAD
-  data() {
-    return {
-      
-    }
-  }
-=======
     data() {
         return {
 
         }
     }
->>>>>>> main
 }
 </script>
 
 <template>
-<<<<<<< HEAD
-<div class="container py-5 ">
-    <div class="row">
+    <div class="container py-5">
+        <div class="row">
 
-        <!-- left side -->
-        <div class="col-7">
-            <img id="bikers" src=".././assets/img_aboutus/bike-player.png" alt="player-img">
+            <!-- left side -->
+            <div class="col-7">
+                <img id="bikers" src="../assets/img_aboutus/bike-player.png" alt="player-img">
                 <img id="gear" class="rotate" src="../assets/img_aboutus/bike-circle.png" alt="gear">
-        </div>
+            </div>
 
-        <!-- right side -->
-        <div class="col-5 d-flex flex-column justify-content-center align-items-start">
-            <div class=" top-text">
-                <h3 class="fw-bold">Do you want to be a professional cyclist?</h3>
-                <p class="mb-1">We offer 6 courses of varying difficulty and beautiful scenary that cyclist of all levels can enjoy it. You will learn cycling from professionals
-                    with our component and experienced staff. You will have a lot of fun with our amazing spaces.
-                </p>
-             </div>
-             <div class="divider">
-                <img src=".././assets/img_aboutus/divider.jpg" alt="divider-img">
-             </div>
-
-
-             <div class="main-content">
-
-                <!-- professional team -->
-                <div class="team d-flex align-items-center">
-                    <img class="img-fluid" src="../assets/img_icons/f1-helmet-svgrepo-com.svg" alt="race-helmet">
-                    <div class="text ms-3 pt-4">
-                        <h4 class="fw-bold">Professional Team</h4>
-                        <p>We make you professional by adding your sincerity as well as professionalism.</p>
-                    </div>
+            <!-- right side -->
+            <div class="col-5 d-flex flex-column justify-content-center align-items-start">
+                <div class="top-text">
+                    <h3 class="fw-bold">Do you want to be a professional cyclist?</h3>
+                    <p class="mb-1">We offer 6 courses of varying difficulty and beautiful scenery that cyclists of all
+                        levels can enjoy. You will learn cycling from professionals
+                        with our competent and experienced staff. You will have a lot of fun in our amazing spaces.
+                    </p>
+                </div>
+                <div class="divider">
+                    <img src="../assets/img_aboutus/divider.jpg" alt="divider-img">
                 </div>
 
-                <!-- professional trainings -->
-                <div class="trainings d-flex align-items-center">
-                    <img class="img-fluid" src="../assets/img_icons/helmet-svgrepo-com.svg" alt="helmet">
-                    <div class="text ms-3">
-                        <h4 class="fw-bold">Professional trainings</h4>
-                        <p>We always ride with the best equipment, respecting nature and fun.</p>
+                <div class="main-content">
+
+                    <!-- professional team -->
+                    <div class="team d-flex align-items-center">
+                        <img class="img-fluid" src="../assets/img_icons/f1-helmet-svgrepo-com.svg" alt="race-helmet">
+                        <div class="text ms-3 pt-4">
+                            <h4 class="fw-bold">Professional Team</h4>
+                            <p>We make you professional by adding your sincerity as well as professionalism.</p>
+                        </div>
                     </div>
+
+                    <!-- professional trainings -->
+                    <div class="trainings d-flex align-items-center">
+                        <img class="img-fluid" src="../assets/img_icons/helmet-svgrepo-com.svg" alt="helmet">
+                        <div class="text ms-3">
+                            <h4 class="fw-bold">Professional trainings</h4>
+                            <p>We always ride with the best equipment, respecting nature and having fun.</p>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <button type="button"
+                        class="btn btn-dark btn-lg px-5 pt-3 pb-3 rounded-0 text-white fs-6 my-4 fw-bold">Get to know us
+                        &RightArrow;</button>
                 </div>
 
-                <!-- button -->
-                <button type="button" class="btn btn-dark btn-lg px-5 pt-3 pb-3 rounded-0 text-white fs-6 my-4 fw-bold">Get to know us &RightArrow;</button>
-             </div>
-
+            </div>
         </div>
     </div>
-</div>
 </template>
 
 <style lang="scss" scoped>
-
 .main-content img {
     height: 80px;
 }
-#bikers{
+
+#bikers {
     position: relative;
     z-index: 1;
 }
@@ -86,21 +79,17 @@ export default {
     z-index: -1;
 }
 
-.rotate{
-    animation: rotation 15s infinite linear;}
+.rotate {
+    animation: rotation 15s infinite linear;
+}
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+    from {
+        transform: rotate(0deg);
     }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
 </style>
-=======
-
-</template>
-
-<style scoped></style>
->>>>>>> main
