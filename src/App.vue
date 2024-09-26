@@ -16,6 +16,11 @@ export default {
   data() {
     return {
     }
+  },
+  methods: {
+    getImagePath: function (imgPath) {
+      return new URL(imgPath, import.meta.url).href;
+    }
   }
 }
 </script>
