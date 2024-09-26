@@ -68,13 +68,10 @@ section{
    background-color: #FBFBFB;
 }
 
-
 .card-img-top img{
-    transition: all 0.3 ease;
     width: 100%;
     height: auto;
 }
-
 .card:hover .card-img-top {
   filter: brightness(50%);
 }
