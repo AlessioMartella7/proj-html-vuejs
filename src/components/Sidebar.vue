@@ -23,7 +23,7 @@
 
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { contactInfo, socialIcons } from '../data/contactInfo'
+import { contactInfo, socialIcons } from '../data/store'
 
 export default {
     name: 'Sidebar',
