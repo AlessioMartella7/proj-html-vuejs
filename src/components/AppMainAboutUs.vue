@@ -1,14 +1,23 @@
 <script>
 export default {
+<<<<<<< HEAD
   data() {
     return {
       
     }
   }
+=======
+    data() {
+        return {
+
+        }
+    }
+>>>>>>> main
 }
 </script>
 
 <template>
+<<<<<<< HEAD
 <div class="container py-5 ">
     <div class="row">
 
@@ -89,3 +98,9 @@ export default {
   }
     }
 </style>
+=======
+
+</template>
+
+<style scoped></style>
+>>>>>>> main

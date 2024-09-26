@@ -1,10 +1,19 @@
 <script>
 export default {
+<<<<<<< HEAD
   data() {
     return {
       
     }
   }
+=======
+    data() {
+        return {
+
+
+        }
+    }
+>>>>>>> main
 }
 </script>
 
@@ -12,5 +21,9 @@ export default {
 
 </template>
 
+<<<<<<< HEAD
 <style scoped>
 </style>
+=======
+<style scoped></style>
+>>>>>>> main
