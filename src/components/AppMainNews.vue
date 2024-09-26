@@ -1,8 +1,10 @@
 <script>
+import { news } from '../data/news';
+
 export default {
     data() {
         return {
-
+            news,
         }
     }
 }
@@ -19,11 +21,13 @@ export default {
             <div class="col">
                 <div class="card">
                     <figure>
-                        <img>
+                        <img :src="news.image" alt="news.image">
                         <figcaption>
-
+                            {{ news.figcaption }}
                         </figcaption>
                     </figure>
+                    <h4>{{ news.title }}</h4>
+                    <p>{{ news.content }}</p>
                     <button>News</button>
                 </div>
             </div>

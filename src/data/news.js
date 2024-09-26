@@ -1,3 +1,5 @@
+
+
 export const news = [
     {
         image: "../img_news/news-bike3-373x223.jpg" ,
