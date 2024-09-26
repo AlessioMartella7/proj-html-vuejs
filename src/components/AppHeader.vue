@@ -1,27 +1,40 @@
-<script>
-export default {
-  data() {
-    return {
 
-    }
-  }
+<script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+export default {
+    name: 'Header',
+    components: {
+        FontAwesomeIcon
+    },
+    data() {
+        return {
+          menuItems:[
+      { text: 'Home', link: '#' },
+        { text: 'About Us', link: '#' },
+        { text: 'Training', link: '#' },
+        { text: 'Packages', link: '#' },
+        { text: 'Blog', link: '#' },
+        { text: 'Contact', link: '#' }
+    ]
+        }
+    },
+   
 }
 </script>
 
 <template>
-<header class="d-flex justify-content-between align-items-center ">
-<img src="../assets/img-header/logo-gobike.png" alt="">
-<ul class="d-flex align-items-center">
-  <li class="ms-3"><a href="">Home</a></li>
-  <li class="ms-3"><a href="">About Us</a></li>
-  <li class="ms-3"><a href="">Training</a></li>
-  <li class="ms-3"><a href="">Packages</a></li>
-  <li class="ms-3"><a href="">Blog</a></li>
-  <li class="ms-3"><a href="">Contact</a></li>
+<header class="d-flex justify-content-between align-items-center bg-white">
+<img class="d-block" src="../assets/img-header/logo-gobike.png" alt="">
+<ul class="d-flex align-items-center" >
+  <li class="ms-3" v-for="(item, index) in menuItems" :key="index">
+    <a :href="item.link">{{ item.text }}</a>
+  </li>
 </ul>
-
+ 
+<font-awesome-icon class="font-size-" :icon="['fas', 'bars']" />
 <button class="btn btn-dark h-50 rounded">
-Upcoming events
+ Upcoming Events <font-awesome-icon :icon="['fas', 'arrow-right']" />
 </button>
 
 </header>
@@ -31,9 +44,9 @@ Upcoming events
 @use "bootstrap/scss/bootstrap";
 
 
+
 header{
   height:100px;
-  background-color: white;
   position: fixed;
     top: 0;
     left: 0;
@@ -45,7 +58,6 @@ padding: 0 50px;
 }
 header img{
   max-height: 100%;
-  display: block;
 }
 
 header ul{
