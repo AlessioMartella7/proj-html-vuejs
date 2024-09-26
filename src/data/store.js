@@ -27,3 +27,37 @@ export const socialIcons = [
         icon: faXTwitter,
     }
 ]
+
+// Array dei quick links
+export const quickLinks = [
+    {
+        name: 'Home',
+        url: '/'
+    },
+    {
+        name: 'About Us',
+        url: '/about'
+    },
+    {
+        name: 'Blog',
+        url: '/blog'
+    },
+    {
+        name: 'Packages',
+        url: '/packages'
+    },
+    {
+        name: 'Contact',
+        url: '/contact'
+    }
+]
+
+export const trainings = [
+    'riding lessons',
+    'safe driving',
+    'mountain bike',
+    'trail drive',
+    'pedaling'
+]
+
+
