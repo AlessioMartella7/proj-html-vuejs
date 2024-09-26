@@ -2,18 +2,14 @@
 export default {
   data() {
     return {
-
+      mainText: 'Main'
     }
   }
 }
 </script>
 
 <template>
-<<<<<<< HEAD
-
-=======
-  <p>Main</p>
->>>>>>> main
+  <p>{{ mainText }}</p>
 </template>
 
 <style scoped></style>

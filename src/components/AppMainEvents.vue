@@ -1,24 +1,17 @@
-<<<<<<< HEAD
-<script></script>
-
-<template></template>
-
-<style></style>
-=======
 <script>
 export default {
     data() {
         return {
-
-
+            // Dati vuoti per ora
         }
     }
 }
 </script>
 
 <template>
-
+    <!-- Template vuoto per ora -->
 </template>
 
-<style scoped></style>
->>>>>>> main
+<style scoped>
+/* Stili vuoti per ora */
+</style>
