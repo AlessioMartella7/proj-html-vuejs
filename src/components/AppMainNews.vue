@@ -8,7 +8,6 @@ export default {
         }
     },
 
-
     methods: {
         getImagePath: function (imgPath) {
             return new URL(imgPath, import.meta.url).href;
@@ -25,11 +24,11 @@ export default {
         <h3>Recent news & articles</h3>
 
         <p>Important information about bikes</p>
-        <div class=" card-list row">
-            <div class="col" v-for="(item, i) in news">
+        <div class=" card-list row row-cols-4 justify-content-between my-4">
+            <div class="col p-4" v-for="(item, i) in news">
                 <div class="card p-4">
                     <figure>
-                        <img :src="getImagePath(item.image)" alt="news.img">
+                        <img :src="getImagePath(item.image)" alt="news.img" class="img-fluid">
                         <figcaption>
                             {{ item.figCaption }}
                         </figcaption>
@@ -54,8 +53,10 @@ export default {
     text-align: center;
 }
 
+
 .card {
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px 5px rgb(241, 241, 241);
+    border: none;
 
     p,
     figcaption,
@@ -64,19 +65,26 @@ export default {
     }
 
     h5,
-    button,
-    figcaption {
+    button {
         font-weight: bold
     }
+
+    figcaption {
+        font-weight: 500;
+    }
+}
+
+.card>* {
+    margin-bottom: 20px;
 }
 
 button {
 
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 5%;
     background: black;
     color: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
     width: 100px;
