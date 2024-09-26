@@ -86,11 +86,13 @@ header img{
 
 header ul{
   list-style-type: none;
+
 }
 
 ul a{
   text-decoration: none;
   color: black;
+   
 }
   
 //Header UL animation hover effect
