@@ -12,19 +12,24 @@ export default {
           menuItems:[
       { text: 'Home', link: '#' },
         { text: 'About Us', link: '#' },
-        { text: 'Training', link: '#' },
-        { text: 'Packages', link: '#' },
-        { text: 'Blog', link: '#' },
-        { text: 'Contact', link: '#' }
-       ],
-       hoverMenu:[
+        { text: 'Training', link: '#',
+      /*  hoverMenu:[
         {text: 'Riding Lessons', link: '#'},
         {text: 'Safe Driving', link:'#'},
         {text:'Mountain Bike', link:'#'},
         {text:'Trail Drive', link: '#'},
         {text:'Pedaling', link:'#'},
-        {text:'All Trainings', link:'#'}
-      ]
+       {text:'All Trainings', link:'#'}
+        ]  */
+    },
+        { text: 'Packages', link: '#' },
+        { text: 'Blog', link: '#' },
+        { text: 'Contact', link: '#' }
+      
+      
+      
+      ],
+ 
         }
     },
    
@@ -37,13 +42,22 @@ export default {
 <ul class="d-flex align-items-center" >
   <li class="ms-3" v-for="(item, index) in menuItems" :key="index"> <!--Popolazione dinamica dell'header tramite array menuItems-->
     <a :href="item.link">{{ item.text }}</a>
+   <!--Hover Sublist-->
+    <ul v-if="item.hoverMenu" class="sublist">
+                <li v-for="(hoverListItem, hoverListIndex) in item.hoverMenu" :key="hoverListIndex">
+                    <a :href="hoverListItem.link">{{ hoverListItem.text }}</a>
+                </li>
+    </ul>
+
+
   </li>
 </ul>
- 
-<font-awesome-icon class="font-size-" :icon="['fas', 'bars']" />
-<button class="btn btn-dark h-50 rounded">
+ <div class="d-flex align-items-center justify-content-between gap-5">
+<a href="#" class="text-dark"><font-awesome-icon class="fs-3" :icon="['fas', 'bars']" /></a>
+ <button class="btn btn-dark rounded">
  Upcoming Events <font-awesome-icon :icon="['fas', 'arrow-right']" />
-</button>
+ </button>
+ </div>
 
 </header>
 </template>
@@ -76,7 +90,8 @@ ul a{
   text-decoration: none;
   color: black;
 }
-
+  
+//Header UL animation hover effect
 ul li{
   position:relative;
 }
@@ -94,5 +109,11 @@ ul li::after{
 ul li:hover::after{
   width:100%;
 }
+
+button{
+  height:80px;
+}
+
+
 
 </style>
