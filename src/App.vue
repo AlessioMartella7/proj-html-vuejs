@@ -18,10 +18,7 @@ export default {
   },
   data() {
     return {
-      AppHeader,
-      AppMain,
-      AppFooter,
-      Sidebar
+  
     }
   }
 }
