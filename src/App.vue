@@ -5,7 +5,7 @@ import AppMain from './components/AppMain.vue';
 // import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
-import AppMainNews from './components/AppMainNews.vue';
+
 
 
 
@@ -17,7 +17,7 @@ export default {
     // Sidebar,
     AppMainAboutUs,
     AppMainEvents,
-    AppMainNews
+
   },
   data() {
     return {
@@ -33,7 +33,6 @@ export default {
   <AppMain />
   <AppMainAboutUs />
   <AppMainEvents />
-  <AppMainNews />
   <AppFooter />
 </template>
 
