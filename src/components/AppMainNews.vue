@@ -18,6 +18,12 @@ export default {
         <div class=" card-list row">
             <div class="col">
                 <div class="card">
+                    <figure>
+                        <img>
+                        <figcaption>
+
+                        </figcaption>
+                    </figure>
                     <button>News</button>
                 </div>
             </div>
