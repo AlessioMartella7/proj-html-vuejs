@@ -1,6 +1,7 @@
 <script>
 import { contactInfo } from '../data/contactInfo';
 import { socialIcons } from '../data/contactInfo';
+import { quickLinks } from '../data/store';
 
 export default {
   data() {
@@ -8,6 +9,18 @@ export default {
       contactInfo,
       socialIcons,
 
+    }
+  },
+
+  props: {
+    quickLinks: {
+      type: Array,
+      Required: true
+    },
+
+    trainings: {
+      type: Array,
+      Required: true
     }
   }
 }
