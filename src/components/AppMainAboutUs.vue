@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-<div class="container">
+<div class="container py-5 ">
     <div class="row">
 
         <!-- left side -->
@@ -73,7 +73,7 @@ export default {
 
 #gear {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 16%;
 }
 
@@ -88,5 +88,4 @@ export default {
     transform: rotate(359deg);
   }
     }
-
 </style>
