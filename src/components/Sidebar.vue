@@ -68,6 +68,7 @@ export default {
     left: 0;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
+    display: none;
 
     &-header {
         display: flex;
