@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-<p>Header</p>
+
 </template>
 
 <style scoped>
