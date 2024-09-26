@@ -88,12 +88,14 @@ export default {
 header {
   height: 100px;
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 1;
   padding: 0 50px;
   font-family: sans-serif;
+  display: flex;
+  align-items: center;
 
   img {
     max-height: 100%;
@@ -101,6 +103,9 @@ header {
 
   ul {
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
 
     a {
       text-decoration: none;
@@ -191,5 +196,10 @@ button {
   to {
     transform: rotate(0deg);
   }
+}
+
+// Stile per mantenere l'header sotto la sidebar quando è aperta
+.sidebar {
+  z-index: 2;
 }
 </style>
