@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar d-none">
+    <div class="sidebar">
         <div class="sidebar-header">
             <img src="../assets/sidebar-assets/loader-gobike.png" alt="logo">
         </div>
