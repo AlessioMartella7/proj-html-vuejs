@@ -15,13 +15,13 @@ export default {
 
 <template>
   <p>Footer</p>
-  <footer class="w-100">
-    <div class="container">
-      <div class="row">
+  <footer class="w-100 p-1">
+    <div class="container ">
+      <div class="row p-3">
         <div class="col-3">
-          <!-- Contatti -->
+          <!--# Contatti -->
           <div id="footer-contacts">
-            <img src="../assets/logos/logo-footer-gobike.png" alt="footer_gobike_logo" class="img-fluid">
+            <img src="../assets/logos/logo-footer-gobike.png" alt="footer_gobike_logo" class="img-fluid mb-3">
 
             <!-- Contacts comp -->
             <ul class="m2">
@@ -32,7 +32,7 @@ export default {
             </ul>
             <!-- Social comp -->
             <div class="social d-flex justify-content-around row">
-              <div class="social-icon col-3 p-2 text-center" v-for="(item, index) in socialIcons" :key="index">
+              <div class="social-icon col-3 p-1 text-center" v-for="(item, index) in socialIcons" :key="index">
                 <a><font-awesome-icon :icon="item.icon" /></a>
 
               </div>
@@ -40,15 +40,15 @@ export default {
             </div>
           </div>
         </div>
-        <!-- Form -->
-        <!-- lista Trainings -->
-        <!-- lista Quick Links -->
+        <!--# Form -->
+        <!--# lista Trainings -->
+        <!--# lista Quick Links -->
 
       </div>
     </div>
-    <!-- Rights Reserved -->
+    <!--# Rights Reserved -->
     <div>
-      <p class="text-center my-4">2024 Gobike - All rights reserved.</p>
+      <p class="text-center my-4">© 2024 Gobike - All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -68,5 +68,23 @@ ul {
 .social-icon {
   border: 1px solid gray;
   cursor: pointer;
+
+  padding: 10px;
+
+  &:nth-child(1):hover {
+    color: #1877F2;
+  }
+
+  &:nth-child(2):hover {
+    color: #E1306C;
+  }
+
+  &:nth-child(3):hover {
+    color: #1DA1F2;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 </style>
