@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import Packs from './components/Packs.vue';
+import MouseFollow from './components/MouseFollow.vue';
 
 export default {
   components: {
@@ -11,7 +12,8 @@ export default {
     AppMain,
     AppFooter,
     Sidebar,
-    Packs
+    Packs,
+    MouseFollow
   },
   data() {
     return {
@@ -19,7 +21,8 @@ export default {
       AppMain,
       AppFooter,
       Sidebar,
-      Packs
+      Packs,
+      MouseFollow
     }
   }
 }
@@ -31,6 +34,7 @@ export default {
   <AppFooter />
   <Sidebar />
   <Packs />
+  <MouseFollow />
 </template>
 
 <style lang="scss"></style>
