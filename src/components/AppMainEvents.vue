@@ -1,10 +1,11 @@
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {events} from '../data/event';
 
-import {events} from '../data/event'
 export default {
   data() {
     return {
-
+      events,
     }
   },
 
@@ -19,19 +20,19 @@ export default {
 
 <template>
 <div class="container">
-  <div class="row">
-    <div v-for="(event, index) in events" class="col-4">
-          <div class="card" style="width: 18rem;">
-      <img :src="getImagePath(event.img)" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="row ">
+    <div v-for="event in events" class="col-4 my-3">
+          <div class="card" style="width: 25rem;">
+      <img :src="getImagePath(event.img)" class="card-img-top" :alt=event.race>
+        <div class="card-body pb-0">
+          <h5 class="card-title fw-bold ">{{ event.race }}</h5>
         </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A third item</li>
+        <font-awesome-icon :icon="['far', 'clock']" />
+        <font-awesome-icon :icon="['fas', 'location-dot']" />
+          <ul class="list-group list-group-flush border-0">
+            <li class="list-group-item border-0 fs-6">{{ event.date }}</li>
+            <li class="list-group-item border-0">{{ event.location }}</li>
+            <li class="list-group-item">{{ event.type }}</li>
           </ul>
       </div>
     </div>
@@ -40,5 +41,4 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 </style>

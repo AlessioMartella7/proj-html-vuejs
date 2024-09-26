@@ -1,10 +1,11 @@
+
 const events = [
     {
       img:'../assets/img_events/event1.jpg' , 
       race: 'Toronto Cycling Event 2023',
       date: '2022-06-22 @ 01.30 - 2024-08-23 @ 07:00 ',
-      location: 'Toronto',
-      type: 'Bycicle Race',
+      location:'Toronto',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event2.jpg' , 
@@ -25,7 +26,7 @@ const events = [
       race: 'New jersey Cycling Event 2023',
       date: '2022-06-25 @ 03.30 - 2023-04-14 @ 05:30 ',
       location: 'New Jersey',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event5.jpg' , 
@@ -39,37 +40,38 @@ const events = [
       race: 'Kiev Cycling Event 2023',
       date: '2022-06-29 @ 10.00 - 2023-04-07 @ 04:30 ',
       location: 'Kiev',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event7.jpg' , 
       race: 'Colorado Cycling Event 2023',
       date: '2022-06-28 @ 04.00 - 2023-03-24 @ 05:30 ',
       location: 'Colorado',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event8.jpg' , 
       race: 'Amsterdam Cycling Event 2023',
       date: '2022-06-28 @ 10.30 - 2024-03-11 @ 10:30 ',
       location: 'Amsterdam',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event9.jpg' , 
       race: 'Toronto Cycling Event 2023',
       date: '2022-06-22 @ 09.30 - 2023-04-23 @ 17:30 ',
       location: 'Toronto',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
      {
       img:'../assets/img_events/event10.jpg' , 
       race: 'Toronto Cycling Event 2023',
       date: '2022-06-26 @ 05.30 - 2023-04-22 @ 14:00 ',
       location: 'Paris',
-      type: 'Bycicle Race',
+      type: 'Bicycle Race',
     },
     
 ]
+
 
 export { events};
