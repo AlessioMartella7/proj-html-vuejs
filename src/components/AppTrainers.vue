@@ -2,81 +2,45 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
-
 export default {
-    components:{
+  components: {
     FontAwesomeIcon,
-    
-    },
+
+  },
   data() {
     return {
-      
-    }
+      trainers: [
+        { name: "Michael Lee", role: "Biker", image:"../../public/img_bikers/biker1.jpg"  },
+        { name: "Robert Lee", role: "Biker", image:"../../public/img_bikers/biker3.jpg"  },
+        { name: "John Doe", role: "Biker", image:"../../public/img_bikers/biker4.jpg" },
+        { name: "Emily Brown", role: "Biker", image:"../../public/img_bikers/biker2.jpg" }
+      ]
+    };
   }
 }
 </script>
 
 <template>
 <section>
-<h3 class="text-center"> <b>Our Expert Trainers</b></h3>
-<p class="text-center text-secondary">Learn to ride a bike from the experts.</p>
-<!--Card section-->
- <!-- Card section -->
- <div class="container">
-      <div class="row mt-5">
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="image-container">
-              <img class="card-img-top" src="../assets/img_bikers/biker3.jpg" alt="Card image cap">
-              <div class="card-text">
-                <h5>John Doe</h5>
-                <small>Biker</small>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h3 class="text-center"><b>Our Expert Trainers</b></h3>
+  <p class="text-center text-secondary">Learn to ride a bike from the experts.</p>
 
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="image-container">
-              <img class="card-img-top" src="../assets/img_bikers/biker2.jpg" alt="Card image cap">
-              <div class="card-text">
-                <h5>John Doe</h5>
-                <small>Biker</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="image-container">
-              <img class="card-img-top" src="../assets/img_bikers/biker1.jpg" alt="Card image cap">
-              <div class="card-text">
-                <h5>John Doe</h5>
-                <small>Biker</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="image-container">
-              <img class="card-img-top" src="../assets/img_bikers/biker4.jpg" alt="Card image cap">
-              <div class="card-text">
-                <h5>John Doe</h5>
-                <small>Biker</small>
-              </div>
+  <!-- Card section -->
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col" v-for="(trainer, index) in trainers" :key="index">
+        <div class="card" style="width: 18rem;">
+          <div class="image-container">
+            <img class="card-img-top" :src="trainer.image" alt="Trainer image">
+            <div class="card-text">
+              <h5>{{ trainer.name }}</h5>
+              <small>{{ trainer.role }}</small>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 </template>
 
@@ -91,12 +55,13 @@ section {
   position: relative;
   overflow: hidden; 
 }
-
 .card-img-top {
   width: 100%;
   height: auto;
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  object-fit: cover; 
 }
+
 
 .card:hover .card-img-top {
   filter: brightness(50%); 
@@ -105,6 +70,9 @@ section {
 
 .image-container {
   position: relative; 
+  width: 100%; 
+  height: 300px; 
+  overflow: hidden; 
 }
 
 .card-text {
