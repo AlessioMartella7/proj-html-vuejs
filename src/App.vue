@@ -6,7 +6,6 @@ import AppMain from './components/AppMain.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
 
-// import Sidebar from './components/Sidebar.vue';
 import MouseFollow from './components/MouseFollow.vue';
 
 export default {
@@ -21,9 +20,8 @@ export default {
   },
   data() {
     return {
-
-      // Sidebar,
-      MouseFollow
+      showSidebar: true,
+      showAppMain: false
     }
   },
 
@@ -38,6 +36,9 @@ export default {
   <AppMain />
   <AppMainAboutUs />
   <AppMainEvents />
+  <Sidebar v-if="showSidebar" />
+  <AppMain v-if="showAppMain" />
+  >>>>>>> main
   <AppFooter />
   <MouseFollow />
 </template>
