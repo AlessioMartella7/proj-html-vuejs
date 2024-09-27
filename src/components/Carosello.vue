@@ -6,9 +6,6 @@
                 <span>Learn from the mountain biking expert.</span>
             </div>
             <div class="carosello-wrapper">
-                <button class="carosello-arrow left" @click="prev">
-                    &lt;
-                </button>
                 <div class="carosello-container">
                     <transition-group name="slide" tag="div" class="image-container">
                         <div class="carosello-item" v-for="(image, index) in visibleImages" :key="index">
@@ -16,6 +13,11 @@
                         </div>
                     </transition-group>
                 </div>
+            </div>
+            <div class="carosello-controls">
+                <button class="carosello-arrow left" @click="prev">
+                    &lt;
+                </button>
                 <button class="carosello-arrow right" @click="next">
                     &gt;
                 </button>
@@ -144,7 +146,7 @@ export default {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    border: 2px solid #000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -153,11 +155,16 @@ export default {
     transform: scale(1.05);
 }
 
+.carosello-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .carosello-arrow {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
@@ -166,21 +173,11 @@ export default {
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s ease;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0 10px;
 }
 
 .carosello-arrow:hover {
-    background-color: #333;
-}
-
-.carosello-arrow.left {
-    left: -60px;
-}
-
-.carosello-arrow.right {
-    right: -60px;
+    background-color: #f0f0f0;
 }
 
 .carousel {
@@ -211,6 +208,32 @@ export default {
 
 .slide-enter-to,
 .slide-leave-from {
+    transform: translateX(0);
+}
+
+/* New sliding animation */
+.image-container {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: opacity 0.5s ease, transform 0.5s ease-in-out;
+}
+
+.slide-enter-from {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide-enter-to,
+.slide-leave-from {
+    opacity: 1;
     transform: translateX(0);
 }
 </style>
