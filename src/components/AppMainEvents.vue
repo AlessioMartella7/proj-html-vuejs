@@ -39,12 +39,22 @@ export default {
 <template>
 <div class="container">
 
-  <!-- bottoni per stabilire tipo di visualizzazione -->
-  <div class="d-flex justify-content-end mb-3">
-      <button class="btn btn-primary me-2" @click="setView('box')">#</button>
-      <button class="btn btn-secondary" @click="setView('list')">=</button>
+  <div class="text-center">
+   <h3 class="text-center fw-bold">Don't Miss Our Events!</h3>
+   <p>Get the amazing cycling experience.</p>
   </div>
-
+  
+  <div class="d-flex justify-content-between align-items-center pt">
+    <div>
+        <p class="fs-4 mb-0">Events</p>
+    </div>
+      <div :class="viewMode === 'list' ? 'mb-3' : ''">
+          <!-- bottoni per stabilire tipo di visualizzazione -->
+          <button class="btn-box btn btn-white me-2" @click="setView('box')":class="{ 'active': viewMode === 'box' }"><font-awesome-icon :icon="['fas', 'grip']" /></button>
+          <button class="btn-list btn btn-black" @click="setView('list')" :class="{ 'active': viewMode === 'list' }"><font-awesome-icon :icon="['far', 'square-minus']" /></button>
+          
+      </div>
+  </div>
 
   <div class="row ">
     <div v-for="event in events" :class="viewMode === 'box' ? 'col-4 gy-4' : 'col-12'">
@@ -52,7 +62,7 @@ export default {
 
           <img :src="getImagePath(event.img)" class="card-img-top" :class="viewMode === 'list' ? 'img-list-view p-2' : ''":alt="event.race">
             
-          <div class="card-body" :class="viewMode === 'list' ? 'd-flex justify-content-start ms-3' : 'pb-0'">
+          <div class="card-body" :class="viewMode === 'list' ? 'd-flex justify-content-start ms-3' : 'pb-3'">
 
             <div v-if="viewMode === 'list'" class="date-info text-center me-3 d-flex align-items-center">
                 <div class="lh-1">
@@ -72,16 +82,16 @@ export default {
             <div>
                 <h5 class="card-title fw-bold">{{ event.race }}</h5>
 
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center mb-2 text-secondary">
                   <font-awesome-icon :icon="['far', 'clock']" class="me-2" />
                   <span>{{ event.startDate}} - {{ event.endDate }}</span>
                 </div>
 
-                <div class="d-flex align-items-center mb-2">
+                <div class="d-flex align-items-center mb-2 text-secondary">
                   <font-awesome-icon :icon="['fas', 'location-dot']" class="me-2" />
                   <span>{{ event.location }}</span>
                 </div>
-                  <span>{{ event.type }}</span>
+                  <span class="race-type rounded-1">{{ event.type }}</span>
             </div>  
           </div>
       </div>
@@ -92,6 +102,8 @@ export default {
 
 <style lang="scss" scoped>
 
+ 
+
 .img-list-view {
   width: 600px;
   height: 150px;
@@ -99,5 +111,21 @@ export default {
 }
 .wider-date {
   font-size: 3.5rem;
+}
+
+.race-type {
+  background-color: #f5f5f5 ;
+  padding: 4px 6px;
+}
+
+
+.btn-box,
+.btn-list {
+  filter: invert(0); 
+}
+
+.btn-box.active,
+.btn-list.active {
+  filter: invert(1);
 }
 </style>
