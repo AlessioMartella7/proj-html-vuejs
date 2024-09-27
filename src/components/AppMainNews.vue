@@ -76,9 +76,9 @@ export default {
 }
 
 #news {
-    margin: 50px 0;
+    margin-top: 50px;
     background-color: #FBFBFB;
-    padding-top: 60px;
+    padding: 60px 0;
 }
 
 h3,
