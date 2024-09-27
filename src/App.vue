@@ -3,6 +3,8 @@ import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 // import Sidebar from './components/Sidebar.vue';
+import quickLinks, { trainings, contactInfo, socialIcons } from './data/store.js';
+
 
 import MouseFollow from './components/MouseFollow.vue';
 import ReturnButton from './components/ReturnButton.vue';
@@ -16,10 +18,15 @@ export default {
     MouseFollow,
     ReturnButton
   },
+
   data() {
     return {
       showSidebar: true,
-      showAppMain: true
+      showAppMain: true,
+      quickLinks,
+      trainings,
+      contactInfo,
+      socialIcons
     }
   },
 
@@ -34,7 +41,7 @@ export default {
     <AppHeader />
     <Sidebar v-if="showSidebar" />
     <AppMain v-if="showAppMain" />
-    <AppFooter />
+    <AppFooter :quickLinks="quickLinks" :trainings="trainings" :contactInfo="contactInfo" :socialIcons="socialIcons" />
     <MouseFollow />
     <ReturnButton />
   </body>
