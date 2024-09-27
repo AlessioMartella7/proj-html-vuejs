@@ -1,10 +1,16 @@
 <script>
-import TrainingSlider from './TrainingsSlider.vue';
+import AppMainAboutUs from './AppMainAboutUs.vue'
+import AppMainEvents from './AppMainEvents.vue';
+import AppMainPacks from './AppMainPacks.vue'
 
 export default {
+  components:{
+     AppMainAboutUs,
+     AppMainEvents,
+     AppMainPacks,
+    },
   data() {
     return {
-
     }
   },
   components: {
@@ -14,9 +20,10 @@ export default {
 </script>
 
 <template>
+  <AppMainAboutUs/>
+  <AppMainEvents/>
+  <AppMainPacks/>
 
-  <p>Main</p>
-  <TrainingSlider />
 </template>
 
 <style scoped></style>

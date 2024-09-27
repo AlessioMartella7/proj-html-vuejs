@@ -11,11 +11,12 @@ export default {
 <template>
     <div class="container py-5">
         <div class="row">
-
             <!-- left side -->
-            <div class="col-7">
-                <img id="bikers" src="../assets/img_aboutus/bike-player.png" alt="player-img">
-                <img id="gear" class="rotate" src="../assets/img_aboutus/bike-circle.png" alt="gear">
+            <div class="col-7 position-relative">
+                <div class="image-container">
+                    <img id="bikers" src="../assets/img_aboutus/bike-player.png" alt="player-img">
+                    <img id="gear" class="rotate" src="../assets/img_aboutus/bike-circle.png" alt="gear">
+                </div>
             </div>
 
             <!-- right side -->
@@ -32,7 +33,6 @@ export default {
                 </div>
 
                 <div class="main-content">
-
                     <!-- professional team -->
                     <div class="team d-flex align-items-center">
                         <img class="img-fluid" src="../assets/img_icons/f1-helmet-svgrepo-com.svg" alt="race-helmet">
@@ -56,7 +56,6 @@ export default {
                         class="btn btn-dark btn-lg px-5 pt-3 pb-3 rounded-0 text-white fs-6 my-4 fw-bold">Get to know us
                         &RightArrow;</button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -67,16 +66,27 @@ export default {
     height: 80px;
 }
 
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 #bikers {
     position: relative;
     z-index: 1;
+    width: 100%;
+    height: auto;
 }
 
 #gear {
     position: absolute;
-    top: 15%;
-    left: 16%;
-    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 100%;
+    height: auto;
 }
 
 .rotate {
@@ -85,11 +95,35 @@ export default {
 
 @keyframes rotation {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     to {
-        transform: rotate(359deg);
+        transform: translate(-50%, -50%) rotate(359deg);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #gear {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #gear {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #gear {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #gear {
+        width: 60%;
     }
 }
 </style>

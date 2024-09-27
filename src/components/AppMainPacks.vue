@@ -65,8 +65,8 @@ export default {
             const cardRect = card.getBoundingClientRect();
             const cardCenterX = cardRect.left + cardRect.width / 2;
             const cardCenterY = cardRect.top + cardRect.height / 2;
-            const angleX = -(event.clientY - cardCenterY) / 10;
-            const angleY = (event.clientX - cardCenterX) / 10;
+            const angleX = -(event.clientY - cardCenterY) / 20;
+            const angleY = (event.clientX - cardCenterX) / 20;
             card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
         },
         resetCard(event) {
@@ -175,7 +175,7 @@ export default {
 
 .pack-card {
     width: 380px;
-    height: 650px;
+    height: 720px;
     perspective: 1000px;
     position: relative;
     transition: transform 0.3s ease;
@@ -220,7 +220,7 @@ export default {
     }
 
     &-front {
-        background: linear-gradient(175deg, #000 50%, #fff 50%);
+        background: linear-gradient(170deg, #000 48%, #fff 50%);
         color: white;
         display: flex;
         justify-content: center;

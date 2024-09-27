@@ -56,7 +56,6 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    display: none; //DA CANCELLARE FINITI I PACKS
 }
 
 .sidebar {
