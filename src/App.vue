@@ -2,7 +2,8 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import Sidebar from './components/Sidebar.vue';
+// import Sidebar from './components/Sidebar.vue';
+
 import MouseFollow from './components/MouseFollow.vue';
 import ReturnButton from './components/ReturnButton.vue';
 
@@ -17,16 +18,13 @@ export default {
   },
   data() {
     return {
-      showSidebar: false,
+      showSidebar: true,
       showAppMain: true
     }
   },
-  methods: {
-    getImagePath: function (imgPath) {
-      return new URL(imgPath, import.meta.url).href;
-    }
-  }
+
 }
+
 </script>
 
 <template>

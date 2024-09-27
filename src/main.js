@@ -8,4 +8,5 @@ library.add(faMapMarkerAlt, faPhone, faEnvelope,faChevronUp)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
+
 app.mount('#app')
