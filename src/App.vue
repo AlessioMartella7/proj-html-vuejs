@@ -5,7 +5,7 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
-import Packs from './components/Packs.vue';
+import AppMainPacks from './components/AppMainPacks.vue';
 import MouseFollow from './components/MouseFollow.vue';
 import ReturnButton from './components/ReturnButton.vue';
 
@@ -17,8 +17,9 @@ export default {
     Sidebar,
     AppMainAboutUs,
     AppMainEvents,
-    Packs,
-    MouseFollow
+    AppMainPacks,
+    MouseFollow,
+    ReturnButton
   },
 
   data() {
@@ -29,6 +30,7 @@ export default {
       trainings,
       contactInfo,
       socialIcons
+
     }
   },
 
@@ -43,8 +45,9 @@ export default {
   <AppMainAboutUs />
   <AppMainEvents />
   <AppFooter />
-  <Packs />
+  <AppMainPacks />
   <MouseFollow />
+  <ReturnButton />
 </template>
 
 <style lang="scss">
