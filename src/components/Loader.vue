@@ -2,20 +2,33 @@
 export default {
     data() {
         return {
-
+            isLoading: true
         }
+    },
+    mounted() {
+        window.addEventListener('load', this.handlePageLoad)
+    },
+    methods: {
+        handlePageLoad() {
+            setTimeout(() => {
+                this.isLoading = false
+            }, 1000)  // Increased delay to 1000ms (1 second)
+        }
+    },
+    beforeUnmount() {
+        window.removeEventListener('load', this.handlePageLoad)
     }
 }
 </script>
 
 <template>
-
-    <div class="loader">
-        <div class="circle rounding-border">
+    <transition name="fade">
+        <div v-if="isLoading" class="loader">
+            <div class="circle rounding-border">
+            </div>
+            <img class="loader-logo" src="../assets/sidebar-assets/loader-gobike.png" alt="loader.png">
         </div>
-        <img class="loader-logo" src="../assets/sidebar-assets/loader-gobike.png" alt="loader.png">
-    </div>
-
+    </transition>
 </template>
 
 <style lang="scss" scoped>
@@ -35,7 +48,6 @@ export default {
         transform: translate(-50%, -50%);
         width: 100px;
     }
-
 
     .circle {
         width: 130px;
@@ -64,5 +76,15 @@ export default {
             transform: rotate(360deg);
         }
     }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.8s; // Increased transition duration to 0.8s
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
