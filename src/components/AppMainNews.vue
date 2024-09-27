@@ -44,7 +44,7 @@ export default {
                 <p>Important information about bikes</p>
             </Transition>
 
-            <div class=" card-list row row-cols-4 justify-content-between my-4">
+            <div class=" card-list row row-cols-4 justify-content-between">
                 <TransitionGroup name="slide-fade-in" appear>
                     <div class="col p-4" v-for="(item, i) in news" :key="i">
                         <div class="card p-4" @mousemove="rotateCard" @mouseleave="resetCard">
@@ -73,6 +73,12 @@ export default {
 
 * {
     text-align: center;
+}
+
+#news {
+    margin: 50px 0;
+    background-color: #FBFBFB;
+    padding-top: 60px;
 }
 
 h3,

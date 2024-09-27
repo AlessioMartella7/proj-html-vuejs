@@ -12,7 +12,7 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar,
+    // Sidebar,
     MouseFollow,
     ReturnButton
   },
