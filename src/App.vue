@@ -2,7 +2,7 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-// import Sidebar from './components/Sidebar.vue';
+import Sidebar from './components/Sidebar.vue';
 import quickLinks, { trainings, contactInfo, socialIcons } from './data/store.js';
 
 
@@ -15,11 +15,6 @@ export default {
     AppMain,
     AppFooter,
     Sidebar,
-    AppMainAboutUs,
-    AppMainEvents,
-    Packs,
-    MouseFollow
-    // Sidebar,
     MouseFollow,
     ReturnButton
   },
