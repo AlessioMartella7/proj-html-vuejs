@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "bootstrap": "^5.3.3",
     "fontawesome": "^5.6.3",
+    "swiper": "^11.1.14",
     "vue": "^3.4.37"
   },
   "devDependencies": {

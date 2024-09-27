@@ -13,7 +13,6 @@ export default {
     AppFooter,
     // Sidebar,
 
-
   },
   data() {
     return {
@@ -21,7 +20,6 @@ export default {
       showAppMain: true
     }
   },
-
 
 }
 
