@@ -30,15 +30,14 @@ export default {
 </script>
 
 <template>
-<section>
+ <section>
   <h3 class="text-center"><b>Our Expert Trainers</b></h3>
   <p class="text-center text-secondary">Learn to ride a bike from the experts.</p>
 
   <!-- Card section -->
-  <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 g-0">
       <div class="col" v-for="(trainer, index) in trainers" :key="index">
-        <div class="card" style="width: 18rem;">
+        <div class="card card-adjustment" style="width: 20rem;">
           <div class="image-container">
             <img class="card-img-top" :src="trainer.image" alt="Trainer image">
             <div class="card-text">
@@ -54,8 +53,8 @@ export default {
         </div>
       </div>
     </div>
-  </div>
-</section>
+
+ </section>
 </template>
 
 <style lang="scss">
@@ -67,15 +66,17 @@ section {
 
 .card {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0; 
 }
+
 .card-img-top {
   width: 100%;
   height: auto;
   transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
   object-fit: cover; 
 }
-
 
 .card:hover .card-img-top {
   filter: brightness(50%); 
@@ -85,7 +86,7 @@ section {
 .image-container {
   position: relative; 
   width: 100%; 
-  height: 350px; 
+  height: 380px; 
   overflow: hidden; 
 }
 
@@ -111,8 +112,8 @@ small{
   display: block; 
   margin-top: 5px; 
   color: #B3B3B3;
+  font-weight: 800;
 }
-
 
 .social-icons {
   display: flex;
@@ -123,5 +124,10 @@ small{
 .social-icons .fa {
   font-size: 0.8rem;
   color: white; 
+}
+
+.card-adjustment {
+  width: 100%; 
+  margin: 0 auto;
 }
 </style>
