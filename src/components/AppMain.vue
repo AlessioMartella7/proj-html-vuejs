@@ -22,7 +22,6 @@ export default {
   <AppMainAboutUs />
   <AppMainEvents />
   <AppMainPacks />
-
 </template>
 
 <style scoped></style>
