@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            // Dati vuoti per ora
+
         }
     }
 }
@@ -61,4 +61,69 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.main-content img {
+    height: 80px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#bikers {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+#gear {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 100%;
+    height: auto;
+}
+
+.rotate {
+    animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(359deg);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #gear {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #gear {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #gear {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #gear {
+        width: 60%;
+    }
+}
+</style>

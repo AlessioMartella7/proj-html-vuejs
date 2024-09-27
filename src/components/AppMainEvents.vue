@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-    <!-- Template vuoto per ora -->
+
 </template>
 
 <style scoped></style>

@@ -2,10 +2,10 @@
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import Sidebar from './components/Sidebar.vue';
-import AppMainAboutUs from './components/AppMainAboutUs.vue';
-import AppMainEvents from './components/AppMainEvents.vue';
-import AppMainPacks from './components/AppMainPacks.vue';
+// import Sidebar from './components/Sidebar.vue';
+import quickLinks, { trainings, contactInfo, socialIcons } from './data/store.js';
+
+
 import MouseFollow from './components/MouseFollow.vue';
 import ReturnButton from './components/ReturnButton.vue';
 
@@ -14,10 +14,7 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    Sidebar,
-    AppMainAboutUs,
-    AppMainEvents,
-    AppMainPacks,
+    // Sidebar,
     MouseFollow,
     ReturnButton
   },
@@ -30,7 +27,6 @@ export default {
       trainings,
       contactInfo,
       socialIcons
-
     }
   },
 
@@ -39,15 +35,16 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <Sidebar />
-  <AppMain />
-  <AppMainAboutUs />
-  <AppMainEvents />
-  <AppFooter />
-  <AppMainPacks />
-  <MouseFollow />
-  <ReturnButton />
+
+  <body>
+
+    <AppHeader />
+    <Sidebar v-if="showSidebar" />
+    <AppMain v-if="showAppMain" />
+    <AppFooter :quickLinks="quickLinks" :trainings="trainings" :contactInfo="contactInfo" :socialIcons="socialIcons" />
+    <MouseFollow />
+    <ReturnButton />
+  </body>
 </template>
 
 <style lang="scss">

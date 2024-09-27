@@ -16,7 +16,7 @@ export default {
 
   data() {
     return {
-      mainText: 'Main'
+
     }
   },
 
@@ -24,7 +24,10 @@ export default {
 </script>
 
 <template>
-  <p>Main</p>
+  <AppMainAboutUs />
+  <AppMainEvents />
+  <AppMainPacks />
+  <AppMainNews />
 </template>
 
 <style scoped></style>
