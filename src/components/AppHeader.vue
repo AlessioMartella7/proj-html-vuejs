@@ -1,85 +1,15 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import Sidebar from './Sidebar.vue'
-
 export default {
-  name: 'Header',
-  components: {
-    FontAwesomeIcon,
-    Sidebar
-  },
   data() {
     return {
-      menuItems: [
-        { text: 'Home', link: '#' },
-        { text: 'About Us', link: '#' },
-        {
-          text: 'Training', link: '#',
-          hoverMenu: [
-            { text: 'Riding Lessons', link: '#' },
-            { text: 'Safe Driving', link: '#' },
-            { text: 'Mountain Bike', link: '#' },
-            { text: 'Trail Drive', link: '#' },
-            { text: 'Pedaling', link: '#' },
-            { text: 'All Trainings', link: '#' }
-          ],
-        },
-        { text: 'Packages', link: '#' },
-        { text: 'Blog', link: '#' },
-        { text: 'Contact', link: '#' }
-      ],
-      isSidebarDisplayed: false,
-      sidebarAnimation: '',
-      iconAnimation: ''
+
     }
-  },
-  methods: {
-    sidebarToggle() {
-      if (!this.isSidebarDisplayed) {
-        this.isSidebarDisplayed = true
-        this.sidebarAnimation = 'slide-in'
-        this.iconAnimation = 'rotate-icon-open'
-        document.addEventListener('click', this.handleOutsideClick)
-      } else {
-        this.sidebarAnimation = 'slide-out'
-        this.iconAnimation = 'rotate-icon-close'
-        setTimeout(() => {
-          this.isSidebarDisplayed = false
-        }, 300) // Match this with the animation duration
-        document.removeEventListener('click', this.handleOutsideClick)
-      }
-    },
-    handleOutsideClick(event) {
-      if (!event.target.closest('.sidebar') && !event.target.closest('a[href="#"]')) {
-        this.sidebarToggle()
-      }
-    }
-  },
-  beforeUnmount() {
-    document.removeEventListener('click', this.handleOutsideClick)
   }
 }
 </script>
 
 <template>
-  <header class="d-flex justify-content-between align-items-center bg-white">
-    <img class="d-block" src="../assets/img-header/logo-gobike.png" alt="">
-    <ul class="d-flex align-items-center">
-      <li class="ms-3" v-for="(item, index) in menuItems" :key="index">
-        <a :href="item.link">{{ item.text }}</a>
-      </li>
-    </ul>
-    <div class="d-flex align-items-center justify-content-between gap-5">
-      <a href="#" @click.prevent="sidebarToggle" class="text-dark">
-        <font-awesome-icon class="fs-3" :icon="['fas', 'bars']" :class="iconAnimation" />
-      </a>
-      <button class="btn btn-dark rounded">
-        <img src="../assets/img_icons/f1-helmet-svgrepo-com.svg" class="helmet">Upcoming Events <font-awesome-icon
-          :icon="['fas', 'arrow-right']" />
-      </button>
-    </div>
-    <Sidebar :isVisible="isSidebarDisplayed" :class="sidebarAnimation" />
-  </header>
+
 </template>
 
 <style lang="scss">
