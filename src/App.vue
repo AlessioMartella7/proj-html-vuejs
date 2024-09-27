@@ -5,6 +5,7 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import MouseFollow from './components/MouseFollow.vue';
 import ReturnButton from './components/ReturnButton.vue';
+import Loader from './components/Loader.vue';
 
 export default {
   components: {
@@ -13,7 +14,8 @@ export default {
     AppFooter,
     Sidebar,
     MouseFollow,
-    ReturnButton
+    ReturnButton,
+    Loader
   },
   data() {
     return {
@@ -39,6 +41,7 @@ export default {
     <AppFooter />
     <MouseFollow />
     <ReturnButton />
+    <Loader />
   </body>
 </template>
 
