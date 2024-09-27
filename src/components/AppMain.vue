@@ -1,19 +1,22 @@
 <script>
+import TrainingSlider from './TrainingsSlider.vue';
+
 export default {
   data() {
     return {
 
     }
+  },
+  components: {
+    TrainingSlider,
   }
 }
 </script>
 
 <template>
-<<<<<<< HEAD
 
-=======
   <p>Main</p>
->>>>>>> main
+  <TrainingSlider />
 </template>
 
 <style scoped></style>
