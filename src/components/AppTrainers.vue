@@ -1,20 +1,29 @@
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons' 
+import { socialIcons } from '../data/store'
 
 
 export default {
   components: {
     FontAwesomeIcon,
+    faFacebookF, faInstagram, faXTwitter,
+    socialIcons
 
   },
   data() {
     return {
       trainers: [
         { name: "Michael Lee", role: "Biker", image:"../../public/img_bikers/biker1.jpg"  },
-        { name: "Robert Lee", role: "Biker", image:"../../public/img_bikers/biker3.jpg"  },
-        { name: "John Doe", role: "Biker", image:"../../public/img_bikers/biker4.jpg" },
+        { name: "Robert Lee", role: "Biker", image:"../../public/img_bikers/biker4.jpg"  },
+        { name: "John Doe", role: "Biker", image:"../../public/img_bikers/biker3.jpg" },
         { name: "Emily Brown", role: "Biker", image:"../../public/img_bikers/biker2.jpg" }
-      ]
+      ],
+      socialIcons: {
+        facebook: faFacebookF,
+        instagram: faInstagram,
+        twitter: faXTwitter
+      }
     };
   }
 }
@@ -35,6 +44,11 @@ export default {
             <div class="card-text">
               <h5>{{ trainer.name }}</h5>
               <small>{{ trainer.role }}</small>
+              <div class="social-icons m-2">
+                <FontAwesomeIcon :icon="socialIcons.facebook" />
+                <FontAwesomeIcon :icon="socialIcons.instagram" />
+                <FontAwesomeIcon :icon="socialIcons.twitter" />
+              </div>
             </div>
           </div>
         </div>
@@ -71,7 +85,7 @@ section {
 .image-container {
   position: relative; 
   width: 100%; 
-  height: 300px; 
+  height: 350px; 
   overflow: hidden; 
 }
 
@@ -97,5 +111,17 @@ small{
   display: block; 
   margin-top: 5px; 
   color: #B3B3B3;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+}
+
+.social-icons .fa {
+  font-size: 0.8rem;
+  color: white; 
 }
 </style>
