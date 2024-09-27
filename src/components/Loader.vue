@@ -9,13 +9,13 @@ export default {
 </script>
 
 <template>
-    <Transition name="slide-down">
-        <div class="loader">
-            <div class="circle rounding-border">
-            </div>
-            <img class="loader-logo" src="../assets/sidebar-assets/loader-gobike.png" alt="loader.png">
+
+    <div class="loader">
+        <div class="circle rounding-border">
         </div>
-    </Transition>
+        <img class="loader-logo" src="../assets/sidebar-assets/loader-gobike.png" alt="loader.png">
+    </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -63,22 +63,6 @@ export default {
         100% {
             transform: rotate(360deg);
         }
-    }
-}
-
-// Transition
-
-.slide-down-leave-active {
-    animation: slide-down 1s ease-in-out;
-}
-
-@keyframes slide-down {
-    from {
-        transform: translateY(100vh);
-    }
-
-    to {
-        transform: translateY(0vh);
     }
 }
 </style>
