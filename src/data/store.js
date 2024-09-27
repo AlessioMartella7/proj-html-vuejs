@@ -1,5 +1,5 @@
-import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export const contactInfo = [
     {
@@ -29,7 +29,8 @@ export const socialIcons = [
 ]
 
 // Array dei quick links
-export const quickLinks = [
+
+const quickLinks= [
     {
         name: 'Home',
         url: '/'
@@ -51,13 +52,17 @@ export const quickLinks = [
         url: '/contact'
     }
 ]
+export default quickLinks;
 
-export const trainings = [
-    'riding lessons',
-    'safe driving',
-    'mountain bike',
-    'trail drive',
-    'pedaling'
+
+export const trainings=[
+    'Riding lessons',
+    'Safe driving',
+    'Mountain bike',
+    'Trail drive',
+    'Pedaling'
 ]
 
+
+    
 

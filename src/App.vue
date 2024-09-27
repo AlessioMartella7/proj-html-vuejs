@@ -5,9 +5,9 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import AppMainAboutUs from './components/AppMainAboutUs.vue';
 import AppMainEvents from './components/AppMainEvents.vue';
-import AppTrainers from './components/AppTrainers.vue';
 import Packs from './components/Packs.vue';
 import MouseFollow from './components/MouseFollow.vue';
+import ReturnButton from './components/ReturnButton.vue';
 
 export default {
   components: {
@@ -17,15 +17,23 @@ export default {
     Sidebar,
     AppMainAboutUs,
     AppMainEvents,
-    AppTrainers,
     Packs,
     MouseFollow
   },
+
   data() {
     return {
+      showSidebar: true,
+      showAppMain: true,
+      quickLinks,
+      trainings,
+      contactInfo,
+      socialIcons
     }
-  }
+  },
+
 }
+
 </script>
 
 <template>
@@ -34,12 +42,26 @@ export default {
   <AppMain />
   <AppMainAboutUs />
   <AppMainEvents />
-  <AppTrainers />
   <AppFooter />
   <Packs />
   <MouseFollow />
 </template>
 
 <style lang="scss">
-@import './styles/general.scss';
+@use "bootstrap/scss/bootstrap.scss" as *;
+@use "./styles/general.scss" as *;
+
+body::-webkit-scrollbar-track {
+
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
 </style>
