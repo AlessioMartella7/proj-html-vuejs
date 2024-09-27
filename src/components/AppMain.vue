@@ -4,25 +4,24 @@ import AppMainEvents from './AppMainEvents.vue';
 import AppMainPacks from './AppMainPacks.vue'
 
 export default {
-  components:{
-     AppMainAboutUs,
-     AppMainEvents,
-     AppMainPacks,
-    },
+  components: {
+    AppMainAboutUs,
+    AppMainEvents,
+    AppMainPacks,
+  },
   data() {
     return {
     }
   },
   components: {
-    TrainingSlider,
   }
 }
 </script>
 
 <template>
-  <AppMainAboutUs/>
-  <AppMainEvents/>
-  <AppMainPacks/>
+  <AppMainAboutUs />
+  <AppMainEvents />
+  <AppMainPacks />
 
 </template>
 
