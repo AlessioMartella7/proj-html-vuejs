@@ -1,6 +1,5 @@
 <script>
 export default {
-  name: Flickity,
   components: {
   },
   data() {
