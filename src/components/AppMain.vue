@@ -9,12 +9,12 @@ export default {
     AppMainEvents,
     AppMainPacks,
   },
+
   data() {
     return {
     }
   },
-  components: {
-  }
+
 }
 </script>
 

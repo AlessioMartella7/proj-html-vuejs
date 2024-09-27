@@ -1,4 +1,6 @@
 <script>
+
+
 export default {
     data() {
         return {
@@ -10,7 +12,7 @@ export default {
 
 <template>
     <div class="up-btn">
-        <a href=""><font-awesome-icon :icon="['fas', 'chevron-up']" /></a>
+        <a href="./AppHeader.vue"><font-awesome-icon :icon="['fas', 'chevron-up']" /></a>
     </div>
 </template>
 
