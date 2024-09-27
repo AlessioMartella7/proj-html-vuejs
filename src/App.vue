@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 import MouseFollow from './components/MouseFollow.vue';
+import ReturnButton from './components/ReturnButton.vue';
 
 export default {
   components: {
@@ -11,7 +12,8 @@ export default {
     AppMain,
     AppFooter,
     Sidebar,
-    MouseFollow
+    MouseFollow,
+    ReturnButton
   },
   data() {
     return {
@@ -36,7 +38,7 @@ export default {
     <AppMain v-if="showAppMain" />
     <AppFooter />
     <MouseFollow />
-
+    <ReturnButton />
   </body>
 </template>
 
@@ -56,6 +58,5 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: #000000;
-
 }
 </style>
