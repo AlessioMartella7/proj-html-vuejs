@@ -151,24 +151,11 @@ header {
   border: 1px solid #ccc; 
   border-radius: 4px; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-  margin-top: 20px;
-  padding: 0;
-  white-space: nowrap;
-}
-.hover-menu ul{
-  display:flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding-top: 30px;
-  margin-top: 20px;
 }
 .hover-menu.show {
     display: block; 
   }
 
-  .hover-menu li{
-   padding: 5px 8px;
-  }
 button {
   height: 80px;
 }
