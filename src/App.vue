@@ -45,7 +45,7 @@ export default {
 @use "./styles/general.scss" as *;
 
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
   background-color: white;
 }
 
@@ -56,6 +56,6 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: #000000;
-  width: 30px;
+
 }
 </style>
