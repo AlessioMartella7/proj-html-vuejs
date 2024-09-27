@@ -5,18 +5,18 @@ export default {
       imagesList: [
         {
           image: 'event1.jpg',
-          title: 'Questo è il titolo della card',
-          text: 'Breve testo descrittivo della card inserita nello slider',
+          title: 'Learn mountain bike from the expert',
+          text: 'Learn cycling from the pros.',
         },
         {
           image: 'event2.jpg',
-          title: 'Questo è un altro titolo della card',
-          text: 'Altro breve testo descrittivo della card inserita nello slider',
+          title: 'Professional cycling club',
+          text: 'Learn cycling from the pros.',
         },
         {
           image: 'event3.jpg',
-          title: 'Questo è un altro titolo ancora',
-          text: 'Breve testo descrittivo',
+          title: 'Unforgettable cycling experience',
+          text: 'Lern cycling from the pros.',
         },
       ],
       activeIndex: 0,
@@ -234,5 +234,9 @@ body {
   left: 20%;
   top: 50%;
   translate: 0 -50%;
+}
+
+h1 {
+  font-size: 4rem;
 }
 </style>
