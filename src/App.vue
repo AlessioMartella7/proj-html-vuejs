@@ -5,6 +5,7 @@ import AppMain from './components/AppMain.vue';
 import Sidebar from './components/Sidebar.vue';
 // import Packs from './components/Packs.vue';
 import MouseFollow from './components/MouseFollow.vue';
+import Carosello from './components/Carosello.vue';
 
 export default {
   components: {
@@ -13,7 +14,8 @@ export default {
     AppFooter,
     Sidebar,
     // Packs,
-    MouseFollow
+    MouseFollow,
+    Carosello
   },
   data() {
     return {
@@ -21,8 +23,10 @@ export default {
       AppMain,
       AppFooter,
       Sidebar,
-      Packs,
-      MouseFollow
+      // Packs,
+      MouseFollow,
+      Carosello,
+      showSidebar: false // Nascondi temporaneamente la sidebar
     }
   }
 }
@@ -32,9 +36,10 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
-  <Sidebar />
+  <Sidebar v-if="showSidebar" />
   <!-- <Packs /> -->
   <MouseFollow />
+  <Carosello />
 </template>
 
 <style lang="scss"></style>
