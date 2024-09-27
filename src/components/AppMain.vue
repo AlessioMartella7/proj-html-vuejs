@@ -2,6 +2,8 @@
 
 import AppMainNews from './AppMainNews.vue';
 
+
+
 export default {
 
   data() {

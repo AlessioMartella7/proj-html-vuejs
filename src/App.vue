@@ -9,8 +9,6 @@ import AppMainEvents from './components/AppMainEvents.vue';
 // import Sidebar from './components/Sidebar.vue';
 import MouseFollow from './components/MouseFollow.vue';
 
-
-
 export default {
   components: {
     AppHeader,
