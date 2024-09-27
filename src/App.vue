@@ -15,8 +15,8 @@ export default {
   },
   data() {
     return {
-      showSidebar: true,
-      showAppMain: false
+      showSidebar: false,
+      showAppMain: true
     }
   },
   methods: {
@@ -28,14 +28,34 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <Sidebar v-if="showSidebar" />
-  <AppMain v-if="showAppMain" />
-  <AppFooter />
-  <MouseFollow />
+
+  <body>
+
+    <AppHeader />
+    <Sidebar v-if="showSidebar" />
+    <AppMain v-if="showAppMain" />
+    <AppFooter />
+    <MouseFollow />
+
+  </body>
 </template>
 
 <style lang="scss">
 @use "bootstrap/scss/bootstrap.scss" as *;
 @use "./styles/general.scss" as *;
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  width: 30px;
+}
 </style>
