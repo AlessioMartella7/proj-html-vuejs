@@ -43,7 +43,7 @@ export default {
 
             <div class="d-flex align-items-center mb-2">
               <font-awesome-icon :icon="['far', 'clock']" class="me-2" />
-              <span>{{ event.date }}</span>
+              <span>{{ event.startDate}} - {{ event.endDate }}</span>
             </div>
 
             <div class="d-flex align-items-center mb-2">
