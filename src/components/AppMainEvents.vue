@@ -47,21 +47,28 @@ export default {
 
 
   <div class="row ">
-    <div v-for="event in events" :class="viewMode === 'box' ? 'col-4' : 'col-12'">
-      <div :class="viewMode === 'list' ? 'd-flex align-items-center border secondary-subtle' : 'card h-100'">
+    <div v-for="event in events" :class="viewMode === 'box' ? 'col-4 gy-4' : 'col-12'">
+      <div :class="viewMode === 'list' ? 'd-flex align-items-center border secondary-subtle' : 'card h-100 '">
 
           <img :src="getImagePath(event.img)" class="card-img-top" :class="viewMode === 'list' ? 'img-list-view p-2' : ''":alt="event.race">
             
           <div class="card-body" :class="viewMode === 'list' ? 'd-flex justify-content-start ms-3' : 'pb-0'">
 
-            <div v-if="viewMode === 'list'" class="date-info text-center me-3">
-                <div>
-                  <span>{{ getStartDate(event.startDate) }} to {{ getEndDate(event.endDate) }}</span>
-                  <br>
-                  <small>{{ getMonthShort(event.startDate) }}</small>
+            <div v-if="viewMode === 'list'" class="date-info text-center me-3 d-flex align-items-center">
+                <div class="lh-1">
+                  <div class="d-flex align-items-center">
+                      <span class="wider-date fw-bold me-2">{{ getStartDate(event.startDate)}}</span>
+                      <span>-</span>
+                      <span class="wider-date fw-bold ms-2">{{ getEndDate(event.endDate) }}</span>
+                  </div>
+                    
+                    <div>
+                      <span>{{ getMonthShort(event.startDate) }}</span>
+                      <span class="ms-5">{{ getMonthShort(event.endDate) }}</span> 
+                    </div>
                 </div>
             </div>
-
+            
             <div>
                 <h5 class="card-title fw-bold">{{ event.race }}</h5>
 
@@ -90,5 +97,7 @@ export default {
   height: 150px;
   object-fit: cover;
 }
-
+.wider-date {
+  font-size: 3.5rem;
+}
 </style>
