@@ -3,7 +3,6 @@
 import AppMainNews from './AppMainNews.vue';
 
 
-
 export default {
 
   data() {
@@ -15,7 +14,6 @@ export default {
   components: {
     AppMainNews
   },
-
 
 }
 </script>

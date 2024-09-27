@@ -1,8 +1,6 @@
 <script>
 import { news } from '../data/news';
 
-
-
 export default {
     data() {
         return {
@@ -71,10 +69,9 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/general.scss" as *;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
 
 * {
-    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
@@ -129,7 +126,7 @@ button {
 }
 
 .slide-fade-in-enter-active {
-    animation: slide-fade-in 1s ease-in-out forwards;
+    animation: slide-fade-in 0.6s ease-in-out forwards;
     transition: opacity 1s;
 }
 
@@ -152,8 +149,8 @@ button {
 }
 
 .slide-fade-up-enter-active {
-    animation: slide-fade-up 0.7s ease-in-out forwards;
-    transition: opacity 0.7s;
+    animation: slide-fade-up 0.6s ease-in-out forwards;
+    transition: opacity 1s;
 }
 
 
@@ -176,8 +173,8 @@ button {
 }
 
 .slide-fade-up-slow-enter-active {
-    animation: slide-fade-up-slow 1s ease-in-out forwards;
-    transition: opacity 1s;
+    animation: slide-fade-up-slow 1.2s ease-in-out forwards;
+    transition: opacity 1.5s;
 }
 
 @keyframes slide-fade-up-slow {

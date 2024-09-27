@@ -9,10 +9,7 @@ export default {
 </script>
 
 <template>
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 </template>
 
 <style scoped></style>
