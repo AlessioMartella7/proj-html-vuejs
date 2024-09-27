@@ -23,6 +23,7 @@ export default {
             { text: 'Pedaling', link: '#' },
             { text: 'All Trainings', link: '#' }
           ],
+          isHoverMenuVisible : false
         },
         { text: 'Packages', link: '#' },
         { text: 'Blog', link: '#' },
@@ -30,7 +31,8 @@ export default {
       ],
       isSidebarDisplayed: false,
       sidebarAnimation: '',
-      iconAnimation: ''
+      iconAnimation: '',
+      showHoverMenu: false 
     }
   },
   methods: {
@@ -53,7 +55,10 @@ export default {
       if (!event.target.closest('.sidebar') && !event.target.closest('a[href="#"]')) {
         this.sidebarToggle()
       }
-    }
+    },
+    toggleHoverMenu(index, value) {
+      this.menuItems[index].isHoverMenuVisible = value;
+  }
   },
   beforeUnmount() {
     document.removeEventListener('click', this.handleOutsideClick)
@@ -66,7 +71,17 @@ export default {
     <img class="d-block" src="../assets/img-header/logo-gobike.png" alt="">
     <ul class="d-flex align-items-center">
       <li class="ms-3" v-for="(item, index) in menuItems" :key="index">
-        <a :href="item.link">{{ item.text }}</a>
+        <a :href="item.link"
+            @mouseover="toggleHoverMenu(index, true)" 
+           @mouseleave="toggleHoverMenu(index, true)"
+        >{{ item.text }}</a>
+        <!-- Hover Menu -->
+        <ul v-if="item.hoverMenu" :class="['hover-menu', { show: item.isHoverMenuVisible }]"
+        @mouseleave="toggleHoverMenu(index, false)">
+          <li v-for="(hoverMenu, subIndex) in item.hoverMenu" :key="subIndex">
+            <a :href="hoverMenu.link">{{ hoverMenu.text }}</a>
+          </li>
+        </ul>
       </li>
     </ul>
     <div class="d-flex align-items-center justify-content-between gap-5">
@@ -128,6 +143,18 @@ header {
     }
   }
 }
+
+.hover-menu {
+  display: none;
+  position: absolute; 
+  background-color: white;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+.hover-menu.show {
+    display: block; 
+  }
 
 button {
   height: 80px;
