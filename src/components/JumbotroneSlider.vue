@@ -237,6 +237,6 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.8rem
 }
 </style>
